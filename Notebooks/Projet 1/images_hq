@@ -1,0 +1,358 @@
+
+
+
+
+<!DOCTYPE html>
+<html class="gl-light ui-neutral with-top-bar with-header " lang="fr">
+<head prefix="og: http://ogp.me/ns#">
+<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>images_hq · main · teaching / Datasets / Art-Challenge · GitLab</title>
+<script>
+//<![CDATA[
+window.gon={};gon.math_rendering_limits_enabled=true;gon.features={"explainCodeChat":false};
+//]]>
+</script>
+
+
+<script>
+//<![CDATA[
+var gl = window.gl || {};
+gl.startup_calls = {"/chevallier-teaching/datasets/art-challenge/-/refs/main/logs_tree/images_hq?format=json\u0026offset=0\u0026ref_type=heads":{},"/chevallier-teaching/datasets/art-challenge/-/blob/main/README.md?format=json\u0026viewer=rich":{}};
+gl.startup_graphql_calls = [{"query":"query pathLastCommit($projectPath: ID!, $path: String, $ref: String!, $refType: RefType) {\n  project(fullPath: $projectPath) {\n    __typename\n    id\n    repository {\n      __typename\n      paginatedTree(path: $path, ref: $ref, refType: $refType) {\n        __typename\n        nodes {\n          __typename\n          lastCommit {\n            __typename\n            id\n            sha\n            title\n            titleHtml\n            descriptionHtml\n            message\n            webPath\n            authoredDate\n            authorName\n            authorGravatar\n            author {\n              __typename\n              id\n              name\n              avatarUrl\n              webPath\n            }\n            signature {\n              __typename\n              ... on GpgSignature {\n                gpgKeyPrimaryKeyid\n                verificationStatus\n              }\n              ... on X509Signature {\n                verificationStatus\n                x509Certificate {\n                  id\n                  subject\n                  subjectKeyIdentifier\n                  x509Issuer {\n                    id\n                    subject\n                    subjectKeyIdentifier\n                  }\n                }\n              }\n              ... on SshSignature {\n                verificationStatus\n                keyFingerprintSha256\n              }\n            }\n            pipelines(ref: $ref, first: 1) {\n              __typename\n              edges {\n                __typename\n                node {\n                  __typename\n                  id\n                  detailedStatus {\n                    __typename\n                    id\n                    detailsPath\n                    icon\n                    tooltip\n                    text\n                    group\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n}\n","variables":{"projectPath":"chevallier-teaching/datasets/art-challenge","ref":"main","path":"images_hq?ref_type=heads","refType":"HEADS"}},{"query":"query getPermissions($projectPath: ID!) {\n  project(fullPath: $projectPath) {\n    id\n    __typename\n    userPermissions {\n      __typename\n      pushCode\n      forkProject\n      createMergeRequestIn\n    }\n  }\n}\n","variables":{"projectPath":"chevallier-teaching/datasets/art-challenge"}},{"query":"fragment PageInfo on PageInfo {\n  __typename\n  hasNextPage\n  hasPreviousPage\n  startCursor\n  endCursor\n}\n\nfragment TreeEntry on Entry {\n  __typename\n  id\n  sha\n  name\n  flatPath\n  type\n}\n\nquery getFiles(\n  $projectPath: ID!\n  $path: String\n  $ref: String!\n  $refType: RefType\n  $pageSize: Int!\n  $nextPageCursor: String\n) {\n  project(fullPath: $projectPath) {\n    id\n    __typename\n    repository {\n      __typename\n      tree(path: $path, ref: $ref, refType: $refType) {\n        __typename\n        trees(first: $pageSize, after: $nextPageCursor) {\n          __typename\n          edges {\n            __typename\n            node {\n              ...TreeEntry\n              webPath\n            }\n          }\n          pageInfo {\n            ...PageInfo\n          }\n        }\n        submodules(first: $pageSize, after: $nextPageCursor) {\n          __typename\n          edges {\n            __typename\n            node {\n              ...TreeEntry\n              webUrl\n              treeUrl\n            }\n          }\n          pageInfo {\n            ...PageInfo\n          }\n        }\n        blobs(first: $pageSize, after: $nextPageCursor) {\n          __typename\n          edges {\n            __typename\n            node {\n              ...TreeEntry\n              mode\n              webPath\n              lfsOid\n            }\n          }\n          pageInfo {\n            ...PageInfo\n          }\n        }\n      }\n    }\n  }\n}\n","variables":{"nextPageCursor":"","pageSize":100,"projectPath":"chevallier-teaching/datasets/art-challenge","ref":"main","path":"images_hq?ref_type=heads","refType":"HEADS"}}];
+
+if (gl.startup_calls && window.fetch) {
+  Object.keys(gl.startup_calls).forEach(apiCall => {
+   gl.startup_calls[apiCall] = {
+      fetchCall: fetch(apiCall, {
+        // Emulate XHR for Rails AJAX request checks
+        headers: {
+          'X-Requested-With': 'XMLHttpRequest'
+        },
+        // fetch won’t send cookies in older browsers, unless you set the credentials init option.
+        // We set to `same-origin` which is default value in modern browsers.
+        // See https://github.com/whatwg/fetch/pull/585 for more information.
+        credentials: 'same-origin'
+      })
+    };
+  });
+}
+if (gl.startup_graphql_calls && window.fetch) {
+  const headers = {"X-CSRF-Token":"z0j77mi6EAhdUqG8k52y-TH-lFPecrrV_Vn9PLLdIizC4ABeg8qL9r_9PEQfKjZM8aSMSwaPIFegjGtj-4G93g","x-gitlab-feature-category":"source_code_management"};
+  const url = `https://plmlab.math.cnrs.fr/api/graphql`
+
+  const opts = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      ...headers,
+    }
+  };
+
+  gl.startup_graphql_calls = gl.startup_graphql_calls.map(call => ({
+    ...call,
+    fetchCall: fetch(url, {
+      ...opts,
+      credentials: 'same-origin',
+      body: JSON.stringify(call)
+    })
+  }))
+}
+
+
+//]]>
+</script>
+
+
+
+<link rel="stylesheet" href="/assets/application-857280eb2c5ebf3a21350a6acc823e0b28bf87da97bda46f8d475bab7806dc71.css" />
+<link rel="stylesheet" href="/assets/page_bundles/tree-613f28b9f7d3865f97b3a25cecb0fc0c1a43a14848d62b1ddf7a45839cd46496.css" /><link rel="stylesheet" href="/assets/page_bundles/commit_description-065c52911d70ac846b47cc0f64e7a6e0d3daadd0cd34f5788259712569dc0dc3.css" /><link rel="stylesheet" href="/assets/page_bundles/projects-61bae953244f300140901fa29f63fbd0ecf2ddc06f150ed34dad3e59368e9a02.css" /><link rel="stylesheet" href="/assets/page_bundles/work_items-1df2eea09269b0096c89bcdeba7f775c344c607599d35c3e540bd969463a3bd4.css" /><link rel="stylesheet" href="/assets/page_bundles/notes_shared-bb04929b630340c7b337fb6bfa30ea2d10fcfe6334e1c2e804a3159fc888c146.css" />
+<link rel="stylesheet" href="/assets/application_utilities-0f64530bdd1cd7f39aa00294ccb76cb9a4a8a8d4fbe2f0f3479997820877adc1.css" />
+<link rel="stylesheet" href="/assets/tailwind-df73256c46d660e287677379ab8d61af8585b74ed0a6d7a788608afecccfd1fb.css" />
+
+
+<link rel="stylesheet" href="/assets/fonts-fae5d3f79948bd85f18b6513a025f863b19636e85b09a1492907eb4b1bb0557b.css" />
+<link rel="stylesheet" href="/assets/highlight/themes/white-4e077f818d11286ef63d2c38533b4af8666edc48a0ac7f20d4892136e219f873.css" />
+
+
+<link rel="preload" href="/assets/application_utilities-0f64530bdd1cd7f39aa00294ccb76cb9a4a8a8d4fbe2f0f3479997820877adc1.css" as="style" type="text/css">
+<link rel="preload" href="/assets/application-857280eb2c5ebf3a21350a6acc823e0b28bf87da97bda46f8d475bab7806dc71.css" as="style" type="text/css">
+<link rel="preload" href="/assets/highlight/themes/white-4e077f818d11286ef63d2c38533b4af8666edc48a0ac7f20d4892136e219f873.css" as="style" type="text/css">
+
+<script src="/assets/locale/fr/app-67a217c64fad532f78495e5e9200e623b13a82bd759b098e6cfda199ee8a2f97.js" defer="defer"></script>
+
+
+<script src="/assets/webpack/runtime.bb284101.bundle.js" defer="defer"></script>
+<script src="/assets/webpack/main.018e6284.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/graphql.e1f11a07.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/commons-pages.admin.abuse_reports.show-pages.dashboard.issues-pages.dashboard.milestones.show-pages.-13e11bbf.94a09ab2.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/commons-pages.admin.abuse_reports.show-pages.dashboard.issues-pages.groups.boards-pages.groups.infra-bae5b164.e1eb380e.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/commons-pages.admin.abuse_reports.show-pages.dashboard.issues-pages.groups.boards-pages.groups.issue-8dfa5f96.74f9ae83.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/commons-pages.admin.abuse_reports.show-pages.dashboard.issues-pages.groups.boards-pages.groups.issue-f804d6c2.35419d5c.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/commons-pages.groups.harbor.repositories-pages.groups.new-pages.groups.packages-pages.groups.registr-c21f1c50.0fbb41f2.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/commons-pages.search.show-super_sidebar.599796f4.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/super_sidebar.a1cd5f8e.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/commons-pages.projects-pages.projects.activity-pages.projects.alert_management.details-pages.project-ee413973.db11e848.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/commons-pages.admin.runners.show-pages.clusters.agents.dashboard-pages.dashboard.groups.index-pages.-d17ea602.9eaa870f.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/commons-pages.projects.blob.show-pages.projects.branches.new-pages.projects.commits.show-pages.proje-81161c0b.7e968083.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/commons-pages.projects.blob.show-pages.projects.show-pages.projects.snippets.edit-pages.projects.sni-42df7d4c.2c0bbb38.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/commons-pages.projects.blob.show-pages.projects.show-pages.projects.snippets.show-pages.projects.tre-c684fcf6.8bf42713.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/commons-pages.projects.branches.index-pages.projects.show-pages.projects.tags.index-pages.projects.tree.show.a37dcf62.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/commons-pages.projects.blob.show-pages.projects.forks.new-pages.projects.show-pages.projects.tree.show.2300d4b7.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/commons-pages.projects.blob.show-pages.projects.show-pages.projects.tree.show.bec15eb6.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/commons-pages.projects.blob.show-pages.projects.tree.show-treeList.9861aec6.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/treeList.d9666b43.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/commons-pages.projects.show-pages.projects.tree.show.d266a6f2.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/pages.projects.tree.show.4cb02fba.chunk.js" defer="defer"></script>
+
+<meta content="object" property="og:type">
+<meta content="GitLab" property="og:site_name">
+<meta content="images_hq · main · teaching / Datasets / Art-Challenge · GitLab" property="og:title">
+<meta content="PLMlab - La forge by Mathrice" property="og:description">
+<meta content="https://plmlab.math.cnrs.fr/assets/twitter_card-570ddb06edf56a2312253c5872489847a0f385112ddbcd71ccfa1570febab5d2.jpg" property="og:image">
+<meta content="64" property="og:image:width">
+<meta content="64" property="og:image:height">
+<meta content="https://plmlab.math.cnrs.fr/chevallier-teaching/datasets/art-challenge/-/tree/main/images_hq?ref_type=heads" property="og:url">
+<meta content="summary" property="twitter:card">
+<meta content="images_hq · main · teaching / Datasets / Art-Challenge · GitLab" property="twitter:title">
+<meta content="PLMlab - La forge by Mathrice" property="twitter:description">
+<meta content="https://plmlab.math.cnrs.fr/assets/twitter_card-570ddb06edf56a2312253c5872489847a0f385112ddbcd71ccfa1570febab5d2.jpg" property="twitter:image">
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="MGZTd-Xrc7a4j-qnrK82u5ezwz8DqOy1_1lrCKtpB-Q9zqjHDpvoSFogd18gGLIOV-nbJ9tVdjeijP1X4jWYFg" />
+<meta name="csp-nonce" />
+<meta name="action-cable-url" content="/-/cable" />
+<link href="/-/manifest.json" rel="manifest">
+<link rel="icon" type="image/png" href="/uploads/-/system/appearance/favicon/1/mathrice-favicon.png" id="favicon" data-original-href="/uploads/-/system/appearance/favicon/1/mathrice-favicon.png" />
+<link rel="apple-touch-icon" type="image/x-icon" href="/assets/apple-touch-icon-b049d4bc0dd9626f31db825d61880737befc7835982586d015bded10b4435460.png" />
+<link href="/search/opensearch.xml" rel="search" title="Search GitLab" type="application/opensearchdescription+xml">
+<link rel="alternate" type="application/atom+xml" title="Art-Challenge:main commits" href="https://plmlab.math.cnrs.fr/chevallier-teaching/datasets/art-challenge/-/commits/main?format=atom" />
+
+
+
+
+<meta content="PLMlab - La forge by Mathrice" name="description">
+<meta content="#ececef" name="theme-color">
+</head>
+
+<body class="tab-width-8 gl-browser-safari gl-platform-mac" data-find-file="/chevallier-teaching/datasets/art-challenge/-/find_file/main?ref_type=heads" data-group="datasets" data-group-full-path="chevallier-teaching/datasets" data-namespace-id="15317" data-page="projects:tree:show" data-page-type-id="main/images_hq" data-project="art-challenge" data-project-full-path="chevallier-teaching/datasets/art-challenge" data-project-id="9943">
+
+<script>
+//<![CDATA[
+gl = window.gl || {};
+gl.client = {"isSafari":true,"isMac":true};
+
+
+//]]>
+</script>
+
+
+<header class="header-logged-out" data-testid="navbar">
+<a class="gl-sr-only gl-accessibility" href="#content-body">Skip to content</a>
+<div class="container-fluid">
+<nav aria-label="Explorer GitLab" class="header-logged-out-nav gl-flex gl-gap-3 gl-justify-between">
+<div class="gl-flex gl-items-center gl-gap-1">
+<span class="gl-sr-only">GitLab</span>
+<a title="Page d&#39;accueil" id="logo" class="header-logged-out-logo has-tooltip" aria-label="Page d&#39;accueil" href="/"><img class="brand-header-logo lazy" alt="" data-src="/uploads/-/system/appearance/header_logo/1/mathrice-RVB-Web-TxtBlanc.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+</a></div>
+<ul class="gl-list-none gl-p-0 gl-m-0 gl-flex gl-gap-3 gl-items-center gl-grow">
+<li class="header-logged-out-nav-item">
+<a class="" href="/explore">Explorer</a>
+</li>
+</ul>
+<ul class="gl-list-none gl-p-0 gl-m-0 gl-flex gl-gap-3 gl-items-center gl-justify-end">
+<li class="header-logged-out-nav-item">
+<a href="/users/sign_in?redirect_to_referer=yes">Connexion</a>
+</li>
+</ul>
+</nav>
+</div>
+</header>
+
+<div class="layout-page page-with-super-sidebar">
+<aside class="js-super-sidebar super-sidebar super-sidebar-loading" data-command-palette="{&quot;project_files_url&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/files/main?format=json&quot;,&quot;project_blob_url&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/blob/main&quot;}" data-force-desktop-expanded-sidebar="" data-is-saas="false" data-root-path="/" data-sidebar="{&quot;is_logged_in&quot;:false,&quot;context_switcher_links&quot;:[{&quot;title&quot;:&quot;Explorer&quot;,&quot;link&quot;:&quot;/explore&quot;,&quot;icon&quot;:&quot;compass&quot;}],&quot;current_menu_items&quot;:[{&quot;id&quot;:&quot;project_overview&quot;,&quot;title&quot;:&quot;Art-Challenge&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:9943,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-project&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;manage_menu&quot;,&quot;title&quot;:&quot;Gestion&quot;,&quot;icon&quot;:&quot;users&quot;,&quot;avatar&quot;:null,&quot;avatar_shape&quot;:&quot;rect&quot;,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/activity&quot;,&quot;is_active&quot;:false,&quot;pill_count&quot;:null,&quot;items&quot;:[{&quot;id&quot;:&quot;activity&quot;,&quot;title&quot;:&quot;Activité&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/activity&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-project-activity&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;members&quot;,&quot;title&quot;:&quot;Membres&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/project_members&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:null,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;labels&quot;,&quot;title&quot;:&quot;Labels&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/labels&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:null,&quot;is_active&quot;:false}],&quot;separated&quot;:false},{&quot;id&quot;:&quot;plan_menu&quot;,&quot;title&quot;:&quot;Programmation&quot;,&quot;icon&quot;:&quot;planning&quot;,&quot;avatar&quot;:null,&quot;avatar_shape&quot;:&quot;rect&quot;,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/issues&quot;,&quot;is_active&quot;:false,&quot;pill_count&quot;:null,&quot;items&quot;:[{&quot;id&quot;:&quot;project_issue_list&quot;,&quot;title&quot;:&quot;Tickets&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/issues&quot;,&quot;pill_count&quot;:&quot;0&quot;,&quot;link_classes&quot;:&quot;shortcuts-issues has-sub-items&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;boards&quot;,&quot;title&quot;:&quot;Tableaux des tickets&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/boards&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-issue-boards&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;milestones&quot;,&quot;title&quot;:&quot;Jalons&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/milestones&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:null,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;project_wiki&quot;,&quot;title&quot;:&quot;Wiki&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/wikis/home&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-wiki&quot;,&quot;is_active&quot;:false}],&quot;separated&quot;:false},{&quot;id&quot;:&quot;code_menu&quot;,&quot;title&quot;:&quot;Code&quot;,&quot;icon&quot;:&quot;code&quot;,&quot;avatar&quot;:null,&quot;avatar_shape&quot;:&quot;rect&quot;,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/merge_requests&quot;,&quot;is_active&quot;:true,&quot;pill_count&quot;:null,&quot;items&quot;:[{&quot;id&quot;:&quot;project_merge_request_list&quot;,&quot;title&quot;:&quot;Requêtes de fusion&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/merge_requests&quot;,&quot;pill_count&quot;:&quot;0&quot;,&quot;link_classes&quot;:&quot;shortcuts-merge_requests&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;files&quot;,&quot;title&quot;:&quot;Dépôt&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/tree/main&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-tree&quot;,&quot;is_active&quot;:true},{&quot;id&quot;:&quot;branches&quot;,&quot;title&quot;:&quot;Branches&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/branches&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:null,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;commits&quot;,&quot;title&quot;:&quot;Validations&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/commits/main?ref_type=heads&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-commits&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;tags&quot;,&quot;title&quot;:&quot;Étiquettes&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/tags&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:null,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;graphs&quot;,&quot;title&quot;:&quot;Graphe du dépôt&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/network/main?ref_type=heads&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-network&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;compare&quot;,&quot;title&quot;:&quot;Comparer les révisions&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/compare?from=main\u0026to=main&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:null,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;project_snippets&quot;,&quot;title&quot;:&quot;Extraits de code&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/snippets&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-snippets&quot;,&quot;is_active&quot;:false}],&quot;separated&quot;:false},{&quot;id&quot;:&quot;build_menu&quot;,&quot;title&quot;:&quot;Compilation&quot;,&quot;icon&quot;:&quot;rocket&quot;,&quot;avatar&quot;:null,&quot;avatar_shape&quot;:&quot;rect&quot;,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/pipelines&quot;,&quot;is_active&quot;:false,&quot;pill_count&quot;:null,&quot;items&quot;:[{&quot;id&quot;:&quot;pipelines&quot;,&quot;title&quot;:&quot;Pipelines&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/pipelines&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-pipelines&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;jobs&quot;,&quot;title&quot;:&quot;Jobs&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/jobs&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-builds&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;pipeline_schedules&quot;,&quot;title&quot;:&quot;Planifications de pipeline&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/pipeline_schedules&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-builds&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;artifacts&quot;,&quot;title&quot;:&quot;Artéfacts&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/artifacts&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-builds&quot;,&quot;is_active&quot;:false}],&quot;separated&quot;:false},{&quot;id&quot;:&quot;deploy_menu&quot;,&quot;title&quot;:&quot;Déploiement&quot;,&quot;icon&quot;:&quot;deployments&quot;,&quot;avatar&quot;:null,&quot;avatar_shape&quot;:&quot;rect&quot;,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/releases&quot;,&quot;is_active&quot;:false,&quot;pill_count&quot;:null,&quot;items&quot;:[{&quot;id&quot;:&quot;releases&quot;,&quot;title&quot;:&quot;Releases&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/releases&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-deployments-releases&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;packages_registry&quot;,&quot;title&quot;:&quot;Registre de paquets&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/packages&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-container-registry&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;container_registry&quot;,&quot;title&quot;:&quot;Registre de conteneur&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/container_registry&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:null,&quot;is_active&quot;:false}],&quot;separated&quot;:false},{&quot;id&quot;:&quot;operations_menu&quot;,&quot;title&quot;:&quot;Opération&quot;,&quot;icon&quot;:&quot;cloud-pod&quot;,&quot;avatar&quot;:null,&quot;avatar_shape&quot;:&quot;rect&quot;,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/environments&quot;,&quot;is_active&quot;:false,&quot;pill_count&quot;:null,&quot;items&quot;:[{&quot;id&quot;:&quot;environments&quot;,&quot;title&quot;:&quot;Environnements&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/environments&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-environments&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;infrastructure_registry&quot;,&quot;title&quot;:&quot;Modules Terraform&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/terraform_module_registry&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:null,&quot;is_active&quot;:false}],&quot;separated&quot;:false},{&quot;id&quot;:&quot;monitor_menu&quot;,&quot;title&quot;:&quot;Surveillance&quot;,&quot;icon&quot;:&quot;monitor&quot;,&quot;avatar&quot;:null,&quot;avatar_shape&quot;:&quot;rect&quot;,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/incidents&quot;,&quot;is_active&quot;:false,&quot;pill_count&quot;:null,&quot;items&quot;:[{&quot;id&quot;:&quot;incidents&quot;,&quot;title&quot;:&quot;Incidents&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/incidents&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:null,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;service_desk&quot;,&quot;title&quot;:&quot;Service d&#39;assistance&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/issues/service_desk&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:null,&quot;is_active&quot;:false}],&quot;separated&quot;:false},{&quot;id&quot;:&quot;analyze_menu&quot;,&quot;title&quot;:&quot;Analyse&quot;,&quot;icon&quot;:&quot;chart&quot;,&quot;avatar&quot;:null,&quot;avatar_shape&quot;:&quot;rect&quot;,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/value_stream_analytics&quot;,&quot;is_active&quot;:false,&quot;pill_count&quot;:null,&quot;items&quot;:[{&quot;id&quot;:&quot;cycle_analytics&quot;,&quot;title&quot;:&quot;Données d&#39;analyse des chaînes de valeur&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/value_stream_analytics&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-project-cycle-analytics&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;contributors&quot;,&quot;title&quot;:&quot;Analyse des contributeurs&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/graphs/main?ref_type=heads&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:null,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;ci_cd_analytics&quot;,&quot;title&quot;:&quot;Données d&#39;analyse CI/CD&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/pipelines/charts&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:null,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;repository_analytics&quot;,&quot;title&quot;:&quot;Données d&#39;analyse du dépôt&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/graphs/main/charts&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-repository-charts&quot;,&quot;is_active&quot;:false}],&quot;separated&quot;:false}],&quot;current_context_header&quot;:&quot;Projet&quot;,&quot;support_path&quot;:&quot;https://forum.math.cnrs.fr/c/services-de-la-plm/plmlab/9&quot;,&quot;docs_path&quot;:&quot;/help/docs&quot;,&quot;display_whats_new&quot;:false,&quot;show_version_check&quot;:null,&quot;search&quot;:{&quot;search_path&quot;:&quot;/search&quot;,&quot;issues_path&quot;:&quot;/dashboard/issues&quot;,&quot;mr_path&quot;:&quot;/dashboard/merge_requests&quot;,&quot;autocomplete_path&quot;:&quot;/search/autocomplete&quot;,&quot;settings_path&quot;:&quot;/search/settings&quot;,&quot;search_context&quot;:{&quot;group&quot;:{&quot;id&quot;:15317,&quot;name&quot;:&quot;Datasets&quot;,&quot;full_name&quot;:&quot;teaching / Datasets&quot;},&quot;group_metadata&quot;:{&quot;issues_path&quot;:&quot;/groups/chevallier-teaching/datasets/-/issues&quot;,&quot;mr_path&quot;:&quot;/groups/chevallier-teaching/datasets/-/merge_requests&quot;},&quot;project&quot;:{&quot;id&quot;:9943,&quot;name&quot;:&quot;Art-Challenge&quot;},&quot;project_metadata&quot;:{&quot;mr_path&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/merge_requests&quot;,&quot;issues_path&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/issues&quot;},&quot;code_search&quot;:true,&quot;ref&quot;:&quot;main&quot;,&quot;scope&quot;:null,&quot;for_snippets&quot;:null}},&quot;panel_type&quot;:&quot;project&quot;,&quot;shortcut_links&quot;:[{&quot;title&quot;:&quot;Extraits de code&quot;,&quot;href&quot;:&quot;/explore/snippets&quot;,&quot;css_class&quot;:&quot;dashboard-shortcuts-snippets&quot;},{&quot;title&quot;:&quot;Groupes&quot;,&quot;href&quot;:&quot;/explore/groups&quot;,&quot;css_class&quot;:&quot;dashboard-shortcuts-groups&quot;},{&quot;title&quot;:&quot;Projets&quot;,&quot;href&quot;:&quot;/explore/projects/starred&quot;,&quot;css_class&quot;:&quot;dashboard-shortcuts-projects&quot;}],&quot;terms&quot;:null}"></aside>
+
+<div class="content-wrapper">
+
+<div class="broadcast-wrapper">
+
+
+
+
+</div>
+<div class="alert-wrapper gl-flex gl-flex-col gl-gap-3 container-fluid container-limited">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flash-container flash-container-page sticky" data-testid="flash-container">
+<div id="js-global-alerts"></div>
+</div>
+
+
+</div>
+<div class="top-bar-fixed container-fluid" data-testid="top-bar">
+<div class="top-bar-container gl-flex gl-items-center gl-gap-2">
+<button class="gl-button btn btn-icon btn-md btn-default btn-default-tertiary js-super-sidebar-toggle-expand super-sidebar-toggle -gl-ml-3" aria-controls="super-sidebar" aria-expanded="false" aria-label="Barre latérale de navigation principale" type="button"><svg class="s16 gl-icon gl-button-icon " data-testid="sidebar-icon"><use href="/assets/icons-50888ef7fb46c3a1fb53bc67cfc1085be59395f0d49dd55cdd8a8e269dede05b.svg#sidebar"></use></svg>
+
+</button>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"teaching","item":"https://plmlab.math.cnrs.fr/chevallier-teaching"},{"@type":"ListItem","position":2,"name":"Datasets","item":"https://plmlab.math.cnrs.fr/chevallier-teaching/datasets"},{"@type":"ListItem","position":3,"name":"Art-Challenge","item":"https://plmlab.math.cnrs.fr/chevallier-teaching/datasets/art-challenge"},{"@type":"ListItem","position":4,"name":"Dépôt","item":"https://plmlab.math.cnrs.fr/chevallier-teaching/datasets/art-challenge/-/tree/main/images_hq?ref_type=heads"}]}
+
+
+</script>
+<div data-testid="breadcrumb-links" id="js-vue-page-breadcrumbs-wrapper">
+<div data-breadcrumbs-json="[{&quot;text&quot;:&quot;teaching&quot;,&quot;href&quot;:&quot;/chevallier-teaching&quot;,&quot;avatarPath&quot;:null},{&quot;text&quot;:&quot;Datasets&quot;,&quot;href&quot;:&quot;/chevallier-teaching/datasets&quot;,&quot;avatarPath&quot;:null},{&quot;text&quot;:&quot;Art-Challenge&quot;,&quot;href&quot;:&quot;/chevallier-teaching/datasets/art-challenge&quot;,&quot;avatarPath&quot;:null},{&quot;text&quot;:&quot;Dépôt&quot;,&quot;href&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/tree/main/images_hq?ref_type=heads&quot;,&quot;avatarPath&quot;:null}]" id="js-vue-page-breadcrumbs"></div>
+<div id="js-injected-page-breadcrumbs"></div>
+</div>
+
+
+<div id="js-work-item-feedback"></div>
+
+
+</div>
+</div>
+
+<div class="container-fluid container-limited project-highlight-puc">
+<main class="content" id="content-body" itemscope itemtype="http://schema.org/SoftwareSourceCode">
+
+
+
+
+
+<div class="tree-holder clearfix js-per-page gl-mt-5" data-blame-per-page="1000" id="tree-holder">
+<div class="nav-block gl-flex gl-flex-col sm:gl-flex-row gl-items-stretch">
+<div class="tree-ref-container gl-flex gl-flex-wrap gl-gap-2 mb-2 mb-md-0">
+<div class="tree-ref-holder gl-max-w-26" data-testid="ref-dropdown-container">
+<div data-project-id="9943" data-project-root-path="/chevallier-teaching/datasets/art-challenge" data-ref-type="heads" id="js-tree-ref-switcher"></div>
+</div>
+<div data-can-collaborate="false" data-can-edit-tree="false" data-can-push-code="false" data-new-blob-path="/chevallier-teaching/datasets/art-challenge/-/new/main" data-new-branch-path="/chevallier-teaching/datasets/art-challenge/-/branches/new" data-new-dir-path="/chevallier-teaching/datasets/art-challenge/-/create_dir/main" data-new-tag-path="/chevallier-teaching/datasets/art-challenge/-/tags/new" data-upload-path="/chevallier-teaching/datasets/art-challenge/-/create/main" id="js-repo-breadcrumb"></div>
+</div>
+<div id="js-blob-controls"></div>
+<div class="tree-controls">
+<div class="gl-flex gl-flex-wrap gl-gap-3 gl-mb-3 sm:gl-mb-0">
+
+
+<div data-history-link="/chevallier-teaching/datasets/art-challenge/-/commits/main" id="js-tree-history-link"></div>
+<button class="gl-button btn btn-md btn-default has-tooltip shortcuts-find-file" title="Go to file, press &lt;kbd class=&#39;flat ml-1&#39; aria-hidden=true&gt;/~&lt;/kbd&gt; or &lt;kbd class=&#39;flat ml-1&#39; aria-hidden=true&gt;t&lt;/kbd&gt;" aria-keyshortcuts="/+~ t" data-html="true" data-event-tracking="click_find_file_button_on_repository_pages" type="button"><span class="gl-button-text">
+Rechercher un fichier
+
+</span>
+
+</button>
+<div class="gl-inline-block" data-css-classes="gl-w-full sm:gl-w-auto" data-options="{&quot;project_path&quot;:&quot;chevallier-teaching/datasets/art-challenge&quot;,&quot;ref&quot;:&quot;main&quot;,&quot;is_fork&quot;:false,&quot;needs_to_fork&quot;:true,&quot;gitpod_enabled&quot;:false,&quot;is_blob&quot;:false,&quot;show_edit_button&quot;:false,&quot;show_web_ide_button&quot;:false,&quot;show_gitpod_button&quot;:false,&quot;show_pipeline_editor_button&quot;:false,&quot;web_ide_url&quot;:&quot;/-/ide/project/chevallier-teaching/datasets/art-challenge/edit/main/-/images_hq&quot;,&quot;edit_url&quot;:&quot;&quot;,&quot;pipeline_editor_url&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/ci/editor?branch_name=main&quot;,&quot;gitpod_url&quot;:&quot;&quot;,&quot;user_preferences_gitpod_path&quot;:&quot;/-/profile/preferences#user_gitpod_enabled&quot;,&quot;user_profile_enable_gitpod_path&quot;:&quot;/-/user_settings/profile?user%5Bgitpod_enabled%5D=true&quot;,&quot;fork_path&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/forks/new&quot;,&quot;fork_modal_id&quot;:null}" data-web-ide-promo-popover-img="/assets/web-ide-promo-popover-9e59939b3b450a7ea385a520971151abb09ddad46141c333d6dcc783b9b91522.svg" id="js-tree-web-ide-link"></div>
+
+<div class="project-code-holder gl-hidden sm:gl-inline-block">
+<div class="git-clone-holder js-git-clone-holder">
+<div data-directory-download-links="[{&quot;text&quot;:&quot;zip&quot;,&quot;path&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/archive/main/art-challenge-main.zip&quot;},{&quot;text&quot;:&quot;tar.gz&quot;,&quot;path&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/archive/main/art-challenge-main.tar.gz&quot;},{&quot;text&quot;:&quot;tar.bz2&quot;,&quot;path&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/archive/main/art-challenge-main.tar.bz2&quot;},{&quot;text&quot;:&quot;tar&quot;,&quot;path&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/archive/main/art-challenge-main.tar&quot;}]" data-http-url="https://plmlab.math.cnrs.fr/chevallier-teaching/datasets/art-challenge.git" data-ssh-url="git@plmlab.math.cnrs.fr:chevallier-teaching/datasets/art-challenge.git" data-xcode-url="" id="js-code-dropdown"></div>
+</div>
+
+</div>
+</div>
+<div class="project-code-holder gl-flex gl-gap-3 sm:!gl-hidden">
+<div class="js-source-code-dropdown" data-css-class="" data-download-artifacts="[]" data-download-links="[{&quot;text&quot;:&quot;zip&quot;,&quot;path&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/archive/main/art-challenge-main.zip&quot;},{&quot;text&quot;:&quot;tar.gz&quot;,&quot;path&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/archive/main/art-challenge-main.tar.gz&quot;},{&quot;text&quot;:&quot;tar.bz2&quot;,&quot;path&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/archive/main/art-challenge-main.tar.bz2&quot;},{&quot;text&quot;:&quot;tar&quot;,&quot;path&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/archive/main/art-challenge-main.tar&quot;}]"></div>
+
+<div class="btn-group mobile-git-clone js-mobile-git-clone btn-block">
+<button class="gl-button btn btn-md btn-confirm clone-dropdown-btn js-clone-dropdown-label" title="Copier" aria-label="Copier" aria-live="polite" data-toggle="tooltip" data-placement="bottom" data-container="body" data-html="true" data-button-text="Copier l&#39;URL de clonage HTTPS" data-size="medium" data-category="primary" data-variant="confirm" data-hide-button-icon="true" data-clipboard-text="https://plmlab.math.cnrs.fr/chevallier-teaching/datasets/art-challenge.git" type="button"><span class="gl-button-text">
+Copier l&#39;URL de clonage HTTPS
+</span>
+
+</button>
+<button class="btn gl-button btn-confirm dropdown-toggle js-dropdown-toggle flex-grow-0 gl-flex gl-items-center gl-justify-center w-auto ml-0" data-toggle="dropdown" type="button">
+<svg class="s16 dropdown-btn-icon icon" data-testid="chevron-down-icon"><use href="/assets/icons-50888ef7fb46c3a1fb53bc67cfc1085be59395f0d49dd55cdd8a8e269dede05b.svg#chevron-down"></use></svg>
+</button>
+<ul class="dropdown-menu dropdown-menu-selectable dropdown-menu-right clone-options-dropdown" data-dropdown>
+<li class="js-clone-links">
+<a class="copier l&#39;url de clonage ssh-selector is-active" href="git@plmlab.math.cnrs.fr:chevallier-teaching/datasets/art-challenge.git" data-clone-type="ssh"><strong class="dropdown-menu-inner-title">Copier l&#39;URL de clonage SSH</strong><span class="dropdown-menu-inner-content">git@plmlab.math.cnrs.fr:chevallier-teaching/datasets/art-challenge.git</span></a>
+</li>
+<li class="js-clone-links">
+<a class="copier l&#39;url https de clonage-selector " href="https://plmlab.math.cnrs.fr/chevallier-teaching/datasets/art-challenge.git" data-clone-type="http"><strong class="dropdown-menu-inner-title">Copier l&#39;URL HTTPS de clonage</strong><span class="dropdown-menu-inner-content">https://plmlab.math.cnrs.fr/chevallier-teaching/datasets/art-challenge.git</span></a>
+</li>
+
+</ul>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="info-well gl-hidden sm:gl-flex project-last-commit gl-flex-col gl-mt-5">
+<div class="gl-m-auto" data-ref-type="heads" id="js-last-commit">
+<div class="gl-spinner-container" role="status"><span aria-label="Chargement en cours" class="gl-spinner gl-spinner-md gl-spinner-dark !gl-align-text-bottom"></span></div>
+</div>
+</div>
+<div data-escaped-ref="main" data-full-name="teaching / Datasets / Art-Challenge" data-project-path="chevallier-teaching/datasets/art-challenge" data-project-short-path="art-challenge" data-ref="main" data-ref-type="heads" id="js-tree-list"></div>
+</div>
+
+<script>
+//<![CDATA[
+  window.gl = window.gl || {};
+  window.gl.webIDEPath = '/-/ide/project/chevallier-teaching/datasets/art-challenge/edit/main/-/images_hq'
+
+
+//]]>
+</script>
+<div data-ambiguous="false" data-ref="main" id="js-ambiguous-ref-modal"></div>
+
+</main>
+</div>
+
+
+</div>
+</div>
+
+
+<script>
+//<![CDATA[
+if ('loading' in HTMLImageElement.prototype) {
+  document.querySelectorAll('img.lazy').forEach(img => {
+    img.loading = 'lazy';
+    let imgUrl = img.dataset.src;
+    // Only adding width + height for avatars for now
+    if (imgUrl.indexOf('/avatar/') > -1 && imgUrl.indexOf('?') === -1) {
+      const targetWidth = img.getAttribute('width') || img.width;
+      imgUrl += `?width=${targetWidth}`;
+    }
+    img.src = imgUrl;
+    img.removeAttribute('data-src');
+    img.classList.remove('lazy');
+    img.classList.add('js-lazy-loaded');
+    img.dataset.testid = 'js-lazy-loaded-content';
+  });
+}
+
+//]]>
+</script>
+<script>
+//<![CDATA[
+gl = window.gl || {};
+gl.experiments = {};
+
+
+//]]>
+</script>
+
+</body>
+</html>
+
