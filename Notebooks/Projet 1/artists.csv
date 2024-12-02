@@ -1,378 +1,51 @@
-
-
-
-
-<!DOCTYPE html>
-<html class="gl-light ui-neutral with-top-bar with-header " lang="fr">
-<head prefix="og: http://ogp.me/ns#">
-<meta charset="utf-8">
-<meta content="IE=edge" http-equiv="X-UA-Compatible">
-<meta content="width=device-width, initial-scale=1" name="viewport">
-<title>artists.csv · main · teaching / Datasets / Art-Challenge · GitLab</title>
-<script>
-//<![CDATA[
-window.gon={};gon.math_rendering_limits_enabled=true;gon.features={"explainCodeChat":false};
-//]]>
-</script>
-
-
-<script>
-//<![CDATA[
-var gl = window.gl || {};
-gl.startup_calls = {"/chevallier-teaching/datasets/art-challenge/-/blob/main/artists.csv?format=json\u0026ref_type=heads\u0026viewer=rich":{}};
-gl.startup_graphql_calls = [{"query":"query getBlobInfo(\n  $projectPath: ID!\n  $filePath: [String!]!\n  $ref: String!\n  $refType: RefType\n  $shouldFetchRawText: Boolean!\n) {\n  project(fullPath: $projectPath) {\n    __typename\n    id\n    repository {\n      __typename\n      empty\n      blobs(paths: $filePath, ref: $ref, refType: $refType) {\n        __typename\n        nodes {\n          __typename\n          id\n          webPath\n          name\n          size\n          rawSize\n          rawTextBlob @include(if: $shouldFetchRawText)\n          fileType\n          language\n          path\n          blamePath\n          editBlobPath\n          gitpodBlobUrl\n          ideEditPath\n          forkAndEditPath\n          ideForkAndEditPath\n          codeNavigationPath\n          projectBlobPathRoot\n          forkAndViewPath\n          environmentFormattedExternalUrl\n          environmentExternalUrlForRouteMap\n          canModifyBlob\n          canModifyBlobWithWebIde\n          canCurrentUserPushToBranch\n          archived\n          storedExternally\n          externalStorage\n          externalStorageUrl\n          rawPath\n          replacePath\n          pipelineEditorPath\n          simpleViewer {\n            fileType\n            tooLarge\n            type\n            renderError\n          }\n          richViewer {\n            fileType\n            tooLarge\n            type\n            renderError\n          }\n        }\n      }\n    }\n  }\n}\n","variables":{"projectPath":"chevallier-teaching/datasets/art-challenge","ref":"main","refType":"HEADS","filePath":"artists.csv","shouldFetchRawText":false}}];
-
-if (gl.startup_calls && window.fetch) {
-  Object.keys(gl.startup_calls).forEach(apiCall => {
-   gl.startup_calls[apiCall] = {
-      fetchCall: fetch(apiCall, {
-        // Emulate XHR for Rails AJAX request checks
-        headers: {
-          'X-Requested-With': 'XMLHttpRequest'
-        },
-        // fetch won’t send cookies in older browsers, unless you set the credentials init option.
-        // We set to `same-origin` which is default value in modern browsers.
-        // See https://github.com/whatwg/fetch/pull/585 for more information.
-        credentials: 'same-origin'
-      })
-    };
-  });
-}
-if (gl.startup_graphql_calls && window.fetch) {
-  const headers = {"X-CSRF-Token":"TEkl8kYf-Sswo7jaeLm6mjHqZ3BVxRgHZq4OU3TWhglB4d5CrW9i1dIMJSL0Dj4v8bB_aI04goU7e5gMPYoZ-w","x-gitlab-feature-category":"source_code_management"};
-  const url = `https://plmlab.math.cnrs.fr/api/graphql`
-
-  const opts = {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      ...headers,
-    }
-  };
-
-  gl.startup_graphql_calls = gl.startup_graphql_calls.map(call => ({
-    ...call,
-    fetchCall: fetch(url, {
-      ...opts,
-      credentials: 'same-origin',
-      body: JSON.stringify(call)
-    })
-  }))
-}
-
-
-//]]>
-</script>
-
-<link rel="prefetch" href="/assets/webpack/monaco.b232988e.chunk.js">
-
-<link rel="stylesheet" href="/assets/application-857280eb2c5ebf3a21350a6acc823e0b28bf87da97bda46f8d475bab7806dc71.css" />
-<link rel="stylesheet" href="/assets/page_bundles/tree-613f28b9f7d3865f97b3a25cecb0fc0c1a43a14848d62b1ddf7a45839cd46496.css" /><link rel="stylesheet" href="/assets/page_bundles/projects-61bae953244f300140901fa29f63fbd0ecf2ddc06f150ed34dad3e59368e9a02.css" /><link rel="stylesheet" href="/assets/page_bundles/commit_description-065c52911d70ac846b47cc0f64e7a6e0d3daadd0cd34f5788259712569dc0dc3.css" /><link rel="stylesheet" href="/assets/page_bundles/work_items-1df2eea09269b0096c89bcdeba7f775c344c607599d35c3e540bd969463a3bd4.css" /><link rel="stylesheet" href="/assets/page_bundles/notes_shared-bb04929b630340c7b337fb6bfa30ea2d10fcfe6334e1c2e804a3159fc888c146.css" />
-<link rel="stylesheet" href="/assets/application_utilities-0f64530bdd1cd7f39aa00294ccb76cb9a4a8a8d4fbe2f0f3479997820877adc1.css" />
-<link rel="stylesheet" href="/assets/tailwind-df73256c46d660e287677379ab8d61af8585b74ed0a6d7a788608afecccfd1fb.css" />
-
-
-<link rel="stylesheet" href="/assets/fonts-fae5d3f79948bd85f18b6513a025f863b19636e85b09a1492907eb4b1bb0557b.css" />
-<link rel="stylesheet" href="/assets/highlight/themes/white-4e077f818d11286ef63d2c38533b4af8666edc48a0ac7f20d4892136e219f873.css" />
-
-
-<link rel="preload" href="/assets/application_utilities-0f64530bdd1cd7f39aa00294ccb76cb9a4a8a8d4fbe2f0f3479997820877adc1.css" as="style" type="text/css">
-<link rel="preload" href="/assets/application-857280eb2c5ebf3a21350a6acc823e0b28bf87da97bda46f8d475bab7806dc71.css" as="style" type="text/css">
-<link rel="preload" href="/assets/highlight/themes/white-4e077f818d11286ef63d2c38533b4af8666edc48a0ac7f20d4892136e219f873.css" as="style" type="text/css">
-
-<script src="/assets/locale/fr/app-67a217c64fad532f78495e5e9200e623b13a82bd759b098e6cfda199ee8a2f97.js" defer="defer"></script>
-
-
-<script src="/assets/webpack/runtime.bb284101.bundle.js" defer="defer"></script>
-<script src="/assets/webpack/main.018e6284.chunk.js" defer="defer"></script>
-<script src="/assets/webpack/graphql.e1f11a07.chunk.js" defer="defer"></script>
-<script src="/assets/webpack/commons-pages.admin.abuse_reports.show-pages.dashboard.issues-pages.dashboard.milestones.show-pages.-13e11bbf.94a09ab2.chunk.js" defer="defer"></script>
-<script src="/assets/webpack/commons-pages.admin.abuse_reports.show-pages.dashboard.issues-pages.groups.boards-pages.groups.infra-bae5b164.e1eb380e.chunk.js" defer="defer"></script>
-<script src="/assets/webpack/commons-pages.admin.abuse_reports.show-pages.dashboard.issues-pages.groups.boards-pages.groups.issue-8dfa5f96.74f9ae83.chunk.js" defer="defer"></script>
-<script src="/assets/webpack/commons-pages.admin.abuse_reports.show-pages.dashboard.issues-pages.groups.boards-pages.groups.issue-f804d6c2.35419d5c.chunk.js" defer="defer"></script>
-<script src="/assets/webpack/commons-pages.groups.harbor.repositories-pages.groups.new-pages.groups.packages-pages.groups.registr-c21f1c50.0fbb41f2.chunk.js" defer="defer"></script>
-<script src="/assets/webpack/commons-pages.search.show-super_sidebar.599796f4.chunk.js" defer="defer"></script>
-<script src="/assets/webpack/super_sidebar.a1cd5f8e.chunk.js" defer="defer"></script>
-<script src="/assets/webpack/commons-pages.projects-pages.projects.activity-pages.projects.alert_management.details-pages.project-ee413973.db11e848.chunk.js" defer="defer"></script>
-<script src="/assets/webpack/commons-pages.admin.runners.show-pages.clusters.agents.dashboard-pages.dashboard.groups.index-pages.-d17ea602.9eaa870f.chunk.js" defer="defer"></script>
-<script src="/assets/webpack/commons-pages.projects.blob.show-pages.projects.branches.new-pages.projects.commits.show-pages.proje-81161c0b.7e968083.chunk.js" defer="defer"></script>
-<script src="/assets/webpack/commons-pages.projects.blob.show-pages.projects.show-pages.projects.snippets.edit-pages.projects.sni-42df7d4c.2c0bbb38.chunk.js" defer="defer"></script>
-<script src="/assets/webpack/commons-pages.projects.blob.show-pages.projects.show-pages.projects.snippets.show-pages.projects.tre-c684fcf6.8bf42713.chunk.js" defer="defer"></script>
-<script src="/assets/webpack/commons-pages.projects.blob.show-pages.projects.forks.new-pages.projects.show-pages.projects.tree.show.2300d4b7.chunk.js" defer="defer"></script>
-<script src="/assets/webpack/commons-pages.projects.blob.show-pages.projects.show-pages.projects.tree.show.bec15eb6.chunk.js" defer="defer"></script>
-<script src="/assets/webpack/commons-pages.projects.blob.show-pages.projects.tree.show-treeList.9861aec6.chunk.js" defer="defer"></script>
-<script src="/assets/webpack/commons-pages.projects.blob.show-pages.projects.commits.show-pages.projects.compare.show.cdfd407a.chunk.js" defer="defer"></script>
-<script src="/assets/webpack/pages.projects.blob.show.4479a877.chunk.js" defer="defer"></script>
-
-<meta content="object" property="og:type">
-<meta content="GitLab" property="og:site_name">
-<meta content="artists.csv · main · teaching / Datasets / Art-Challenge · GitLab" property="og:title">
-<meta content="PLMlab - La forge by Mathrice" property="og:description">
-<meta content="https://plmlab.math.cnrs.fr/assets/twitter_card-570ddb06edf56a2312253c5872489847a0f385112ddbcd71ccfa1570febab5d2.jpg" property="og:image">
-<meta content="64" property="og:image:width">
-<meta content="64" property="og:image:height">
-<meta content="https://plmlab.math.cnrs.fr/chevallier-teaching/datasets/art-challenge/-/blob/main/artists.csv?ref_type=heads" property="og:url">
-<meta content="summary" property="twitter:card">
-<meta content="artists.csv · main · teaching / Datasets / Art-Challenge · GitLab" property="twitter:title">
-<meta content="PLMlab - La forge by Mathrice" property="twitter:description">
-<meta content="https://plmlab.math.cnrs.fr/assets/twitter_card-570ddb06edf56a2312253c5872489847a0f385112ddbcd71ccfa1570febab5d2.jpg" property="twitter:image">
-
-<meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="OvYZJsUOBQuDTXbrsa1zEM7mYcLMvMcgGh3ZOg3mSKo3XuKWLn6e9WHi6xM9GvelDrx52hRBXaJHyE9lRLrXWA" />
-<meta name="csp-nonce" />
-<meta name="action-cable-url" content="/-/cable" />
-<link href="/-/manifest.json" rel="manifest">
-<link rel="icon" type="image/png" href="/uploads/-/system/appearance/favicon/1/mathrice-favicon.png" id="favicon" data-original-href="/uploads/-/system/appearance/favicon/1/mathrice-favicon.png" />
-<link rel="apple-touch-icon" type="image/x-icon" href="/assets/apple-touch-icon-b049d4bc0dd9626f31db825d61880737befc7835982586d015bded10b4435460.png" />
-<link href="/search/opensearch.xml" rel="search" title="Search GitLab" type="application/opensearchdescription+xml">
-
-
-
-
-<meta content="PLMlab - La forge by Mathrice" name="description">
-<meta content="#ececef" name="theme-color">
-</head>
-
-<body class="tab-width-8 gl-browser-safari gl-platform-mac" data-find-file="/chevallier-teaching/datasets/art-challenge/-/find_file/main?ref_type=heads" data-group="datasets" data-group-full-path="chevallier-teaching/datasets" data-namespace-id="15317" data-page="projects:blob:show" data-page-type-id="main/artists.csv" data-project="art-challenge" data-project-full-path="chevallier-teaching/datasets/art-challenge" data-project-id="9943">
-
-<script>
-//<![CDATA[
-gl = window.gl || {};
-gl.client = {"isSafari":true,"isMac":true};
-
-
-//]]>
-</script>
-
-
-<header class="header-logged-out" data-testid="navbar">
-<a class="gl-sr-only gl-accessibility" href="#content-body">Skip to content</a>
-<div class="container-fluid">
-<nav aria-label="Explorer GitLab" class="header-logged-out-nav gl-flex gl-gap-3 gl-justify-between">
-<div class="gl-flex gl-items-center gl-gap-1">
-<span class="gl-sr-only">GitLab</span>
-<a title="Page d&#39;accueil" id="logo" class="header-logged-out-logo has-tooltip" aria-label="Page d&#39;accueil" href="/"><img class="brand-header-logo lazy" alt="" data-src="/uploads/-/system/appearance/header_logo/1/mathrice-RVB-Web-TxtBlanc.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
-</a></div>
-<ul class="gl-list-none gl-p-0 gl-m-0 gl-flex gl-gap-3 gl-items-center gl-grow">
-<li class="header-logged-out-nav-item">
-<a class="" href="/explore">Explorer</a>
-</li>
-</ul>
-<ul class="gl-list-none gl-p-0 gl-m-0 gl-flex gl-gap-3 gl-items-center gl-justify-end">
-<li class="header-logged-out-nav-item">
-<a href="/users/sign_in?redirect_to_referer=yes">Connexion</a>
-</li>
-</ul>
-</nav>
-</div>
-</header>
-
-<div class="layout-page page-with-super-sidebar">
-<aside class="js-super-sidebar super-sidebar super-sidebar-loading" data-command-palette="{&quot;project_files_url&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/files/main?format=json&quot;,&quot;project_blob_url&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/blob/main&quot;}" data-force-desktop-expanded-sidebar="" data-is-saas="false" data-root-path="/" data-sidebar="{&quot;is_logged_in&quot;:false,&quot;context_switcher_links&quot;:[{&quot;title&quot;:&quot;Explorer&quot;,&quot;link&quot;:&quot;/explore&quot;,&quot;icon&quot;:&quot;compass&quot;}],&quot;current_menu_items&quot;:[{&quot;id&quot;:&quot;project_overview&quot;,&quot;title&quot;:&quot;Art-Challenge&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:9943,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-project&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;manage_menu&quot;,&quot;title&quot;:&quot;Gestion&quot;,&quot;icon&quot;:&quot;users&quot;,&quot;avatar&quot;:null,&quot;avatar_shape&quot;:&quot;rect&quot;,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/activity&quot;,&quot;is_active&quot;:false,&quot;pill_count&quot;:null,&quot;items&quot;:[{&quot;id&quot;:&quot;activity&quot;,&quot;title&quot;:&quot;Activité&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/activity&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-project-activity&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;members&quot;,&quot;title&quot;:&quot;Membres&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/project_members&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:null,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;labels&quot;,&quot;title&quot;:&quot;Labels&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/labels&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:null,&quot;is_active&quot;:false}],&quot;separated&quot;:false},{&quot;id&quot;:&quot;plan_menu&quot;,&quot;title&quot;:&quot;Programmation&quot;,&quot;icon&quot;:&quot;planning&quot;,&quot;avatar&quot;:null,&quot;avatar_shape&quot;:&quot;rect&quot;,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/issues&quot;,&quot;is_active&quot;:false,&quot;pill_count&quot;:null,&quot;items&quot;:[{&quot;id&quot;:&quot;project_issue_list&quot;,&quot;title&quot;:&quot;Tickets&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/issues&quot;,&quot;pill_count&quot;:&quot;0&quot;,&quot;link_classes&quot;:&quot;shortcuts-issues has-sub-items&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;boards&quot;,&quot;title&quot;:&quot;Tableaux des tickets&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/boards&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-issue-boards&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;milestones&quot;,&quot;title&quot;:&quot;Jalons&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/milestones&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:null,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;project_wiki&quot;,&quot;title&quot;:&quot;Wiki&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/wikis/home&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-wiki&quot;,&quot;is_active&quot;:false}],&quot;separated&quot;:false},{&quot;id&quot;:&quot;code_menu&quot;,&quot;title&quot;:&quot;Code&quot;,&quot;icon&quot;:&quot;code&quot;,&quot;avatar&quot;:null,&quot;avatar_shape&quot;:&quot;rect&quot;,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/merge_requests&quot;,&quot;is_active&quot;:true,&quot;pill_count&quot;:null,&quot;items&quot;:[{&quot;id&quot;:&quot;project_merge_request_list&quot;,&quot;title&quot;:&quot;Requêtes de fusion&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/merge_requests&quot;,&quot;pill_count&quot;:&quot;0&quot;,&quot;link_classes&quot;:&quot;shortcuts-merge_requests&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;files&quot;,&quot;title&quot;:&quot;Dépôt&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/tree/main&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-tree&quot;,&quot;is_active&quot;:true},{&quot;id&quot;:&quot;branches&quot;,&quot;title&quot;:&quot;Branches&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/branches&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:null,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;commits&quot;,&quot;title&quot;:&quot;Validations&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/commits/main?ref_type=heads&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-commits&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;tags&quot;,&quot;title&quot;:&quot;Étiquettes&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/tags&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:null,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;graphs&quot;,&quot;title&quot;:&quot;Graphe du dépôt&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/network/main?ref_type=heads&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-network&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;compare&quot;,&quot;title&quot;:&quot;Comparer les révisions&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/compare?from=main\u0026to=main&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:null,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;project_snippets&quot;,&quot;title&quot;:&quot;Extraits de code&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/snippets&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-snippets&quot;,&quot;is_active&quot;:false}],&quot;separated&quot;:false},{&quot;id&quot;:&quot;build_menu&quot;,&quot;title&quot;:&quot;Compilation&quot;,&quot;icon&quot;:&quot;rocket&quot;,&quot;avatar&quot;:null,&quot;avatar_shape&quot;:&quot;rect&quot;,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/pipelines&quot;,&quot;is_active&quot;:false,&quot;pill_count&quot;:null,&quot;items&quot;:[{&quot;id&quot;:&quot;pipelines&quot;,&quot;title&quot;:&quot;Pipelines&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/pipelines&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-pipelines&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;jobs&quot;,&quot;title&quot;:&quot;Jobs&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/jobs&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-builds&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;pipeline_schedules&quot;,&quot;title&quot;:&quot;Planifications de pipeline&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/pipeline_schedules&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-builds&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;artifacts&quot;,&quot;title&quot;:&quot;Artéfacts&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/artifacts&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-builds&quot;,&quot;is_active&quot;:false}],&quot;separated&quot;:false},{&quot;id&quot;:&quot;deploy_menu&quot;,&quot;title&quot;:&quot;Déploiement&quot;,&quot;icon&quot;:&quot;deployments&quot;,&quot;avatar&quot;:null,&quot;avatar_shape&quot;:&quot;rect&quot;,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/releases&quot;,&quot;is_active&quot;:false,&quot;pill_count&quot;:null,&quot;items&quot;:[{&quot;id&quot;:&quot;releases&quot;,&quot;title&quot;:&quot;Releases&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/releases&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-deployments-releases&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;packages_registry&quot;,&quot;title&quot;:&quot;Registre de paquets&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/packages&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-container-registry&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;container_registry&quot;,&quot;title&quot;:&quot;Registre de conteneur&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/container_registry&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:null,&quot;is_active&quot;:false}],&quot;separated&quot;:false},{&quot;id&quot;:&quot;operations_menu&quot;,&quot;title&quot;:&quot;Opération&quot;,&quot;icon&quot;:&quot;cloud-pod&quot;,&quot;avatar&quot;:null,&quot;avatar_shape&quot;:&quot;rect&quot;,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/environments&quot;,&quot;is_active&quot;:false,&quot;pill_count&quot;:null,&quot;items&quot;:[{&quot;id&quot;:&quot;environments&quot;,&quot;title&quot;:&quot;Environnements&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/environments&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-environments&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;infrastructure_registry&quot;,&quot;title&quot;:&quot;Modules Terraform&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/terraform_module_registry&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:null,&quot;is_active&quot;:false}],&quot;separated&quot;:false},{&quot;id&quot;:&quot;monitor_menu&quot;,&quot;title&quot;:&quot;Surveillance&quot;,&quot;icon&quot;:&quot;monitor&quot;,&quot;avatar&quot;:null,&quot;avatar_shape&quot;:&quot;rect&quot;,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/incidents&quot;,&quot;is_active&quot;:false,&quot;pill_count&quot;:null,&quot;items&quot;:[{&quot;id&quot;:&quot;incidents&quot;,&quot;title&quot;:&quot;Incidents&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/incidents&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:null,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;service_desk&quot;,&quot;title&quot;:&quot;Service d&#39;assistance&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/issues/service_desk&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:null,&quot;is_active&quot;:false}],&quot;separated&quot;:false},{&quot;id&quot;:&quot;analyze_menu&quot;,&quot;title&quot;:&quot;Analyse&quot;,&quot;icon&quot;:&quot;chart&quot;,&quot;avatar&quot;:null,&quot;avatar_shape&quot;:&quot;rect&quot;,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/value_stream_analytics&quot;,&quot;is_active&quot;:false,&quot;pill_count&quot;:null,&quot;items&quot;:[{&quot;id&quot;:&quot;cycle_analytics&quot;,&quot;title&quot;:&quot;Données d&#39;analyse des chaînes de valeur&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/value_stream_analytics&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-project-cycle-analytics&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;contributors&quot;,&quot;title&quot;:&quot;Analyse des contributeurs&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/graphs/main?ref_type=heads&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:null,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;ci_cd_analytics&quot;,&quot;title&quot;:&quot;Données d&#39;analyse CI/CD&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/pipelines/charts&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:null,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;repository_analytics&quot;,&quot;title&quot;:&quot;Données d&#39;analyse du dépôt&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/graphs/main/charts&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-repository-charts&quot;,&quot;is_active&quot;:false}],&quot;separated&quot;:false}],&quot;current_context_header&quot;:&quot;Projet&quot;,&quot;support_path&quot;:&quot;https://forum.math.cnrs.fr/c/services-de-la-plm/plmlab/9&quot;,&quot;docs_path&quot;:&quot;/help/docs&quot;,&quot;display_whats_new&quot;:false,&quot;show_version_check&quot;:null,&quot;search&quot;:{&quot;search_path&quot;:&quot;/search&quot;,&quot;issues_path&quot;:&quot;/dashboard/issues&quot;,&quot;mr_path&quot;:&quot;/dashboard/merge_requests&quot;,&quot;autocomplete_path&quot;:&quot;/search/autocomplete&quot;,&quot;settings_path&quot;:&quot;/search/settings&quot;,&quot;search_context&quot;:{&quot;group&quot;:{&quot;id&quot;:15317,&quot;name&quot;:&quot;Datasets&quot;,&quot;full_name&quot;:&quot;teaching / Datasets&quot;},&quot;group_metadata&quot;:{&quot;issues_path&quot;:&quot;/groups/chevallier-teaching/datasets/-/issues&quot;,&quot;mr_path&quot;:&quot;/groups/chevallier-teaching/datasets/-/merge_requests&quot;},&quot;project&quot;:{&quot;id&quot;:9943,&quot;name&quot;:&quot;Art-Challenge&quot;},&quot;project_metadata&quot;:{&quot;mr_path&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/merge_requests&quot;,&quot;issues_path&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/issues&quot;},&quot;code_search&quot;:true,&quot;ref&quot;:&quot;main&quot;,&quot;scope&quot;:null,&quot;for_snippets&quot;:null}},&quot;panel_type&quot;:&quot;project&quot;,&quot;shortcut_links&quot;:[{&quot;title&quot;:&quot;Extraits de code&quot;,&quot;href&quot;:&quot;/explore/snippets&quot;,&quot;css_class&quot;:&quot;dashboard-shortcuts-snippets&quot;},{&quot;title&quot;:&quot;Groupes&quot;,&quot;href&quot;:&quot;/explore/groups&quot;,&quot;css_class&quot;:&quot;dashboard-shortcuts-groups&quot;},{&quot;title&quot;:&quot;Projets&quot;,&quot;href&quot;:&quot;/explore/projects/starred&quot;,&quot;css_class&quot;:&quot;dashboard-shortcuts-projects&quot;}],&quot;terms&quot;:null}"></aside>
-
-<div class="content-wrapper">
-
-<div class="broadcast-wrapper">
-
-
-
-
-</div>
-<div class="alert-wrapper gl-flex gl-flex-col gl-gap-3 container-fluid container-limited">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="flash-container flash-container-page sticky" data-testid="flash-container">
-<div id="js-global-alerts"></div>
-</div>
-
-
-</div>
-<div class="top-bar-fixed container-fluid" data-testid="top-bar">
-<div class="top-bar-container gl-flex gl-items-center gl-gap-2">
-<button class="gl-button btn btn-icon btn-md btn-default btn-default-tertiary js-super-sidebar-toggle-expand super-sidebar-toggle -gl-ml-3" aria-controls="super-sidebar" aria-expanded="false" aria-label="Barre latérale de navigation principale" type="button"><svg class="s16 gl-icon gl-button-icon " data-testid="sidebar-icon"><use href="/assets/icons-50888ef7fb46c3a1fb53bc67cfc1085be59395f0d49dd55cdd8a8e269dede05b.svg#sidebar"></use></svg>
-
-</button>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"teaching","item":"https://plmlab.math.cnrs.fr/chevallier-teaching"},{"@type":"ListItem","position":2,"name":"Datasets","item":"https://plmlab.math.cnrs.fr/chevallier-teaching/datasets"},{"@type":"ListItem","position":3,"name":"Art-Challenge","item":"https://plmlab.math.cnrs.fr/chevallier-teaching/datasets/art-challenge"},{"@type":"ListItem","position":4,"name":"Dépôt","item":"https://plmlab.math.cnrs.fr/chevallier-teaching/datasets/art-challenge/-/blob/main/artists.csv?ref_type=heads"}]}
-
-
-</script>
-<div data-testid="breadcrumb-links" id="js-vue-page-breadcrumbs-wrapper">
-<div data-breadcrumbs-json="[{&quot;text&quot;:&quot;teaching&quot;,&quot;href&quot;:&quot;/chevallier-teaching&quot;,&quot;avatarPath&quot;:null},{&quot;text&quot;:&quot;Datasets&quot;,&quot;href&quot;:&quot;/chevallier-teaching/datasets&quot;,&quot;avatarPath&quot;:null},{&quot;text&quot;:&quot;Art-Challenge&quot;,&quot;href&quot;:&quot;/chevallier-teaching/datasets/art-challenge&quot;,&quot;avatarPath&quot;:null},{&quot;text&quot;:&quot;Dépôt&quot;,&quot;href&quot;:&quot;/chevallier-teaching/datasets/art-challenge/-/blob/main/artists.csv?ref_type=heads&quot;,&quot;avatarPath&quot;:null}]" id="js-vue-page-breadcrumbs"></div>
-<div id="js-injected-page-breadcrumbs"></div>
-</div>
-
-
-<div id="js-work-item-feedback"></div>
-
-
-</div>
-</div>
-
-<div class="container-fluid container-limited project-highlight-puc">
-<main class="content" id="content-body" itemscope itemtype="http://schema.org/SoftwareSourceCode">
-
-
-
-
-<div class="js-signature-container" data-signatures-path="/chevallier-teaching/datasets/art-challenge/-/commits/2dd47352e326d5254429727518ccaf3119ec139c/signatures?limit=1"></div>
-
-<div class="tree-holder gl-pt-4" id="tree-holder">
-<div class="nav-block">
-<div class="tree-ref-container">
-<div class="tree-ref-holder gl-max-w-26">
-<div data-project-id="9943" data-project-root-path="/chevallier-teaching/datasets/art-challenge" data-ref="main" data-ref-type="heads" id="js-tree-ref-switcher"></div>
-</div>
-<ul class="breadcrumb repo-breadcrumb">
-<li class="breadcrumb-item">
-<a href="/chevallier-teaching/datasets/art-challenge/-/tree/main?ref_type=heads">art-challenge
-</a></li>
-<li class="breadcrumb-item">
-<a href="/chevallier-teaching/datasets/art-challenge/-/blob/main/artists.csv?ref_type=heads"><strong>artists.csv</strong>
-</a></li>
-</ul>
-</div>
-<div class="tree-controls gl-flex gl-flex-wrap sm:gl-flex-nowrap gl-items-baseline gl-gap-3">
-<button class="gl-button btn btn-md btn-default has-tooltip shortcuts-find-file" title="Go to file, press &lt;kbd class=&#39;flat ml-1&#39; aria-hidden=true&gt;/~&lt;/kbd&gt; or &lt;kbd class=&#39;flat ml-1&#39; aria-hidden=true&gt;t&lt;/kbd&gt;" aria-keyshortcuts="/+~ t" data-html="true" data-event-tracking="click_find_file_button_on_repository_pages" type="button"><span class="gl-button-text">
-Rechercher un fichier
-
-</span>
-
-</button>
-<a data-event-tracking="click_blame_control_on_blob_page" class="gl-button btn btn-md btn-default js-blob-blame-link" href="/chevallier-teaching/datasets/art-challenge/-/blame/main/artists.csv?ref_type=heads"><span class="gl-button-text">
-Blame
-</span>
-
-</a>
-<a data-event-tracking="click_history_control_on_blob_page" class="gl-button btn btn-md btn-default " href="/chevallier-teaching/datasets/art-challenge/-/commits/main/artists.csv?ref_type=heads"><span class="gl-button-text">
-Historique
-</span>
-
-</a>
-<a aria-keyshortcuts="y" class="gl-button btn btn-md btn-default has-tooltip js-data-file-blob-permalink-url" data-html="true" title="Accéder au permalien &lt;kbd class=&#39;flat ml-1&#39; aria-hidden=true&gt;y&lt;/kbd&gt;" href="/chevallier-teaching/datasets/art-challenge/-/blob/2dd47352e326d5254429727518ccaf3119ec139c/artists.csv"><span class="gl-button-text">
-Lien permanent
-</span>
-
-</a>
-</div>
-</div>
-
-<div class="info-well gl-hidden sm:gl-block">
-<div class="well-segment">
-<ul class="blob-commit-info">
-<li class="commit flex-row js-toggle-container" id="commit-2dd47352">
-<div class="avatar-cell gl-hidden sm:gl-block">
-<a href="/juliette.chevallier"><img alt="Juliette Chevallier&#39;s avatar" src="/uploads/-/system/user/avatar/3005/avatar.png?width=80" class="avatar s40 gl-hidden sm:gl-inline-block" title="Juliette Chevallier"></a>
-</div>
-<div class="commit-detail flex-list gl-flex gl-justify-between gl-items-center gl-grow gl-min-w-0">
-<div class="commit-content" data-testid="commit-content">
-<a class="commit-row-message item-title js-onboarding-commit-item " href="/chevallier-teaching/datasets/art-challenge/-/commit/2dd47352e326d5254429727518ccaf3119ec139c">add artists</a>
-<span class="commit-row-message d-inline d-sm-none">
-&middot;
-2dd47352
-</span>
-<div class="committer">
-<a class="commit-author-link js-user-link" data-user-id="3005" href="/juliette.chevallier">Juliette Chevallier</a> a rédigé <time class="js-timeago" title="oct. 7, 2024 11:55am" datetime="2024-10-07T09:55:18Z" data-toggle="tooltip" data-placement="bottom" data-container="body">oct. 07, 2024</time>
-</div>
-
-</div>
-<div class="commit-actions flex-row">
-
-<div class="js-commit-pipeline-status" data-endpoint="/chevallier-teaching/datasets/art-challenge/-/commit/2dd47352e326d5254429727518ccaf3119ec139c/pipelines?ref=main"></div>
-<div class="commit-sha-group btn-group gl-hidden sm:gl-flex">
-<div class="label label-monospace monospace">
-2dd47352
-</div>
-<button class="gl-button btn btn-icon btn-md btn-default " title="Copier le SHA de la validation" aria-label="Copier le SHA de la validation" aria-live="polite" data-toggle="tooltip" data-placement="bottom" data-container="body" data-html="true" data-category="primary" data-size="medium" data-clipboard-text="2dd47352e326d5254429727518ccaf3119ec139c" type="button"><svg class="s16 gl-icon gl-button-icon " data-testid="copy-to-clipboard-icon"><use href="/assets/icons-50888ef7fb46c3a1fb53bc67cfc1085be59395f0d49dd55cdd8a8e269dede05b.svg#copy-to-clipboard"></use></svg>
-
-</button>
-
-</div>
-</div>
-</div>
-</li>
-
-</ul>
-</div>
-
-</div>
-<div class="blob-content-holder js-per-page" data-blame-per-page="1000" id="blob-content-holder">
-<div data-blob-path="artists.csv" data-can-download-code="true" data-original-branch="main" data-project-path="chevallier-teaching/datasets/art-challenge" data-ref-type="heads" data-resource-id="gid://gitlab/Project/9943" data-target-branch="main" data-user-id="" id="js-view-blob-app">
-<div class="gl-spinner-container" role="status"><span aria-label="Chargement en cours" class="gl-spinner gl-spinner-md gl-spinner-dark !gl-align-text-bottom"></span></div>
-</div>
-</div>
-
-</div>
-<script>
-//<![CDATA[
-  window.gl = window.gl || {};
-  window.gl.webIDEPath = '/-/ide/project/chevallier-teaching/datasets/art-challenge/edit/main/-/artists.csv'
-
-
-//]]>
-</script>
-<div data-ambiguous="false" data-ref="main" id="js-ambiguous-ref-modal"></div>
-
-</main>
-</div>
-
-
-</div>
-</div>
-
-
-<script>
-//<![CDATA[
-if ('loading' in HTMLImageElement.prototype) {
-  document.querySelectorAll('img.lazy').forEach(img => {
-    img.loading = 'lazy';
-    let imgUrl = img.dataset.src;
-    // Only adding width + height for avatars for now
-    if (imgUrl.indexOf('/avatar/') > -1 && imgUrl.indexOf('?') === -1) {
-      const targetWidth = img.getAttribute('width') || img.width;
-      imgUrl += `?width=${targetWidth}`;
-    }
-    img.src = imgUrl;
-    img.removeAttribute('data-src');
-    img.classList.remove('lazy');
-    img.classList.add('js-lazy-loaded');
-    img.dataset.testid = 'js-lazy-loaded-content';
-  });
-}
-
-//]]>
-</script>
-<script>
-//<![CDATA[
-gl = window.gl || {};
-gl.experiments = {};
-
-
-//]]>
-</script>
-
-</body>
-</html>
-
+id,name,years,genre,nationality,bio,wikipedia,paintings
+0,Amedeo Modigliani,1884 - 1920,Expressionism,Italian,"Amedeo Clemente Modigliani (Italian pronunciation: [ameˈdɛːo modiʎˈʎaːni]; 12 July 1884 – 24 January 1920) was an Italian Jewish painter and sculptor who worked mainly in France. He is known for portraits and nudes in a modern style characterized by elongation of faces, necks, and figures that were not received well during his lifetime but later found acceptance. Modigliani spent his youth in Italy, where he studied the art of antiquity and the Renaissance. In 1906 he moved to Paris, where he came into contact with such artists as Pablo Picasso and Constantin Brâncuși. By 1912 Modigliani was exhibiting highly stylized sculptures with Cubists of the Section d'Or group at the Salon d'Automne.",http://en.wikipedia.org/wiki/Amedeo_Modigliani,193
+1,Vasiliy Kandinskiy,1866 - 1944,"Expressionism,Abstractionism",Russian,"Wassily Wassilyevich Kandinsky (Russian: Васи́лий Васи́льевич Канди́нский, tr. Vasíliy Vasílʹevich Kandínskiy) (16 December [O.S. 4 December] 1866 – 13 December 1944) was a Russian painter and art theorist.",http://en.wikipedia.org/wiki/Wassily_Kandinsky,88
+2,Diego Rivera,1886 - 1957,"Social Realism,Muralism",Mexican,"Diego María de la Concepción Juan Nepomuceno Estanislao de la Rivera y Barrientos Acosta y Rodríguez, known as Diego Rivera (Spanish pronunciation: [ˈdjeɣo riˈβeɾa]; December 8, 1886 – November 24, 1957) was a prominent Mexican painter. His large frescoes helped establish the Mexican mural movement in Mexican art. Between 1922 and 1953, Rivera painted murals in, among other places, Mexico City, Chapingo, Cuernavaca, San Francisco, Detroit, and New York City. In 1931, a retrospective exhibition of his works was held at the Museum of Modern Art in New York. Rivera had a volatile marriage with fellow Mexican artist Frida Kahlo.",http://en.wikipedia.org/wiki/Diego_Rivera,70
+3,Claude Monet,1840 - 1926,Impressionism,French,"Oscar-Claude Monet (; French: [klod mɔnɛ]; 14 November 1840 – 5 December 1926) was a French painter, a founder of French Impressionist painting and the most consistent and prolific practitioner of the movement's philosophy of expressing one's perceptions before nature, especially as applied to plein air landscape painting. The term ""Impressionism"" is derived from the title of his painting Impression, soleil levant (Impression, Sunrise), which was exhibited in 1874 in the first of the independent exhibitions mounted by Monet and his associates as an alternative to the Salon de Paris.Monet's ambition of documenting the French countryside led him to adopt a method of painting the same scene many times in order to capture the changing of light and the passing of the seasons. From 1883, Monet lived in Giverny, where he purchased a house and property and began a vast landscaping project which included lily ponds that would become the subjects of his best-known works. In 1899, he began painting the water lilies, first in vertical views with a Japanese bridge as a central feature and later in the series of large-scale paintings that was to occupy him continuously for the next 20 years of his life.",http://en.wikipedia.org/wiki/Claude_Monet,73
+4,Rene Magritte,1898 - 1967,"Surrealism,Impressionism",Belgian,"René François Ghislain Magritte (French: [ʁəne fʁɑ̃swa ɡilɛ̃ maɡʁit]; 21 November 1898 – 15 August 1967) was a Belgian Surrealist artist. He became well known for creating a number of witty and thought-provoking images. Often depicting ordinary objects in an unusual context, his work is known for challenging observers' preconditioned perceptions of reality. His imagery has influenced Pop art, minimalist and conceptual art.",http://en.wikipedia.org/wiki/René_Magritte,194
+5,Salvador Dali,1904 - 1989,Surrealism,Spanish,"Salvador Domingo Felipe Jacinto Dalí i Domènech, 1st Marquis of Dalí de Púbol (11 May 1904 – 23 January 1989), known professionally as Salvador Dalí (; Catalan: [səlβəˈðo ðəˈli]; Spanish: [salβaˈðoɾ ðaˈli]), was a prominent Spanish surrealist born in Figueres, Catalonia, Spain.",http://en.wikipedia.org/wiki/Salvador_Dalí,139
+6,Edouard Manet,1832 - 1883,"Realism,Impressionism",French,"Édouard Manet (US: ; UK: ; French: [edwaʁ manɛ]; 23 January 1832 – 30 April 1883) was a French modernist painter. He was one of the first 19th-century artists to paint modern life, and a pivotal figure in the transition from Realism to Impressionism.",http://en.wikipedia.org/wiki/Édouard_Manet,90
+7,Andrei Rublev,1360 - 1430,Byzantine Art,Russian,"Andrei Rublev (Russian: Андре́й Рублёв, IPA: [ɐnˈdrʲej rʊˈblʲɵf], also transliterated as Andrey Rublyov; born in the 1360s, died 29 January 1427 or 1430, or 17 October 1428 in Moscow) is considered to be one of the greatest medieval Russian painters of Orthodox icons and frescos.",http://en.wikipedia.org/wiki/Andrei_Rublev,99
+8,Vincent van Gogh,1853 – 1890,Post-Impressionism,Dutch,"Vincent Willem van Gogh (Dutch: [ˈvɪnsɛnt ˈʋɪləm vɑŋ ˈɣɔx] (listen); 30 March 1853 – 29 July 1890) was a Dutch Post-Impressionist painter who is among the most famous and influential figures in the history of Western art. In just over a decade he created about 2,100 artworks, including around 860 oil paintings, most of them in the last two years of his life. They include landscapes, still lifes, portraits and self-portraits, and are characterised by bold colours and dramatic, impulsive and expressive brushwork that contributed to the foundations of modern art. However, he was not commercially successful, and his suicide at 37 followed years of mental illness and poverty.",http://en.wikipedia.org/wiki/Vincent_van_Gogh,877
+9,Gustav Klimt,1862 - 1918,"Symbolism,Art Nouveau",Austrian,"Gustav Klimt (July 14, 1862 – February 6, 1918) was an Austrian symbolist painter and one of the most prominent members of the Vienna Secession movement. Klimt is noted for his paintings, murals, sketches, and other objets d'art. Klimt's primary subject was the female body, and his works are marked by a frank eroticism. In addition to his figurative works, which include allegories and portraits, he painted landscapes. Among the artists of the Vienna Secession, Klimt was the most influenced by Japanese art and its methods.",http://en.wikipedia.org/wiki/Gustav_Klimt,117
+10,Hieronymus Bosch,1450 - 1516,Northern Renaissance,Dutch,"Hieronymus Bosch ( (listen); Dutch: [ɦijeːˈroːnimʏz ˈbɔs] (listen); born Jheronimus van Aken [jeːˈroːnimʏs fɑn ˈaːkə(n)]; c. 1450 – 9 August 1516) was a Dutch/Netherlandish draughtsman and painter from Brabant. He is one of the most notable representatives of the Early Netherlandish painting school. His work contains fantastic illustrations of religious concepts and narratives. Within his lifetime his work was collected in the Netherlands, Austria, and Spain, and widely copied, especially his macabre and nightmarish depictions of hell.",http://en.wikipedia.org/wiki/Hieronymus_Bosch,137
+11,Kazimir Malevich,1879 - 1935,Suprematism,Russian,"Kazimir Severinovich Malevich (February 23 [O.S. 11] 1879 – May 15, 1935) was a Russian avant-garde artist and art theorist, whose pioneering work and writing had a profound influence on the development of non-objective, or abstract art, in the 20th century. Born in Kiev to an ethnic Polish family, his concept of Suprematism sought to develop a form of expression that moved as far as possible from the world of natural forms (objectivity) and subject matter in order to access ""the supremacy of pure feeling"" and spirituality.Early on, Malevich worked in a variety of styles, quickly assimilating the movements of Impressionism, Symbolism and Fauvism, and after visiting Paris in 1912, Cubism. Gradually simplifying his style, he developed an approach with key works consisting of pure geometric forms and their relationships to one another, set against minimal grounds. His Black Square (1915), a black square on white, represented the most radically abstract painting known to have been created so far and drew ""an uncrossable line (…) between old art and new art""; Suprematist Composition: White on White (1918), a barely differentiated off-white square superimposed on an off-white ground, would take his ideal of pure abstraction to its logical conclusion. In addition to his paintings, Malevich laid down his theories in writing, such as ""From Cubism and Futurism to Suprematism"" (1915) and The Non-Objective World: The Manifesto of Suprematism (1926).Malevich's trajectory in many ways mirrored the tumult of the decades surrounding the October Revolution (O.S.) in 1917. In its immediate aftermath, vanguard movements such as Suprematism and Vladimir Tatlin's Constructivism were encouraged by Trotskyite factions in the government. Malevich held several prominent teaching positions and received a solo show at the Sixteenth State Exhibition in Moscow in 1919. His recognition spread to the West with solo exhibitions in Warsaw and Berlin in 1927. Upon his return, modern art was falling out of favor with the new government of Joseph Stalin. Malevich soon lost his teaching position, artworks and manuscripts were confiscated, and he was banned from making art. In 1930, he was imprisoned for two months due to suspicions raised by his trip to Poland and Germany. Forced to abandon abstraction, he painted in a representational style in the years before his death from cancer in 1935, at the age of 56.",http://en.wikipedia.org/wiki/Kazimir_Malevich,126
+12,Mikhail Vrubel,1856 - 1910,Symbolism,Russian,"Mikhail Aleksandrovich Vrubel (Russian: Михаи́л Алекса́ндрович Вру́бель; March 17, 1856 – April 14, 1910, all n.s.) is usually regarded amongst the Russian painters of the Symbolist movement and of Art Nouveau. In reality, he deliberately stood aloof from contemporary art trends, so that the origin of his unusual manner should be sought in Late Byzantine and Early Renaissance painting.",http://en.wikipedia.org/wiki/Mikhail_Vrubel,171
+13,Pablo Picasso,1881 - 1973,Cubism,Spanish,"Pablo Ruiz Picasso (; Spanish: [ˈpaβlo piˈkaso]; 25 October 1881 – 8 April 1973) was a Spanish painter, sculptor, printmaker, ceramicist, stage designer, poet and playwright who spent most of his adult life in France. Regarded as one of the most influential artists of the 20th century, he is known for co-founding the Cubist movement, the invention of constructed sculpture, the co-invention of collage, and for the wide variety of styles that he helped develop and explore. Among his most famous works are the proto-Cubist Les Demoiselles d'Avignon (1907), and Guernica (1937), a dramatic portrayal of the bombing of Guernica by the German and Italian airforces during the Spanish Civil War.",http://en.wikipedia.org/wiki/Pablo_Picasso,439
+14,Peter Paul Rubens,1577 - 1640,Baroque,Flemish,"Sir Peter Paul Rubens (; Dutch: [ˈrybə(n)s]; 28 June 1577 – 30 May 1640) was a Flemish artist. He is considered the most influential artist of Flemish Baroque tradition. Rubens's highly charged compositions reference erudite aspects of classical and Christian history. His unique and immensely popular Baroque style emphasized movement, color, and sensuality, which followed the immediate, dramatic artistic style promoted in the Counter-Reformation. Rubens specialized in making altarpieces, portraits, landscapes, and history paintings of mythological and allegorical subjects.",http://en.wikipedia.org/wiki/Peter_Paul_Rubens,141
+15,Pierre-Auguste Renoir,1841 - 1919,Impressionism,French,"Pierre-Auguste Renoir, commonly known as Auguste Renoir (; French: [pjɛʁ oɡyst ʁənwaʁ]; 25 February 1841 – 3 December 1919), was a French artist who was a leading painter in the development of the Impressionist style. As a celebrator of beauty and especially feminine sensuality, it has been said that ""Renoir is the final representative of a tradition which runs directly from Rubens to Watteau.""",http://en.wikipedia.org/wiki/Pierre-Auguste_Renoir,336
+16,Francisco Goya,1746 - 1828,Romanticism,Spanish,"Francisco José de Goya y Lucientes (; Spanish: [fɾanˈθisko xoˈse ðe ˈɣoʝa i luˈθjentes]; 30 March 1746 – 16 April 1828) was a Spanish romantic painter and printmaker. He is considered the most important Spanish artist of the late 18th and early 19th centuries and throughout his long career was a commentator and chronicler of his era. Immensely successful in his lifetime, Goya is often referred to as both the last of the Old Masters and the first of the moderns.  He was also one of the great contemporary portraitists.He was born to a modest family in 1746 in the village of Fuendetodos in Aragon. He studied painting from age 14 under José Luzán y Martinez and moved to Madrid to study with Anton Raphael Mengs. He married Josefa Bayeu in 1773; their life was characterised by an almost constant series of pregnancies and miscarriages, and only one child, a son, survived into adulthood. Goya became a court painter to the Spanish Crown in 1786 and this early portion of his career is marked by portraits of the Spanish aristocracy and royalty, and Rococo style tapestry cartoons designed for the royal palace.",http://en.wikipedia.org/wiki/Francisco_Goya,291
+17,Frida Kahlo,1907 - 1954,"Primitivism,Surrealism",Mexican,"Frida Kahlo de Rivera (Spanish pronunciation: [ˈfɾiða ˈkalo]; born Magdalena Carmen Frida Kahlo y Calderón; 6 July 1907 – 13 July 1954) was a Mexican artist who painted many portraits, self-portraits and works inspired by the nature and artifacts of Mexico. Inspired by the country's popular culture, she employed a naïve folk art style to explore questions of identity, postcolonialism, gender, class and race in Mexican society. Her paintings often had strong autobiographical elements and mixed realism with fantasy. In addition to belonging to the post-revolutionary Mexicayotl movement, which sought to define a Mexican identity, Kahlo has been described as a surrealist or magical realist.Born to a German father and a mestiza mother, Kahlo spent most of her childhood and adult life at her family home in Coyoacán, La Casa Azul, now known and publicly accessible as the Frida Kahlo Museum. She was disabled by polio as a child. Until a traffic accident at age eighteen caused lifelong pain and medical problems, she had been a promising student headed for medical school. During her recovery, she returned to her childhood hobby of art with the idea of becoming an artist.",http://en.wikipedia.org/wiki/Frida_Kahlo,120
+18,El Greco,1541 - 1614,Mannerism,"Spanish,Greek","Doménikos Theotokópoulos (Greek: Δομήνικος Θεοτοκόπουλος [ðoˈminikos θeotoˈkopulos]; October 1541 –  7 April 1614), most widely known as El Greco (""The Greek""), was a painter, sculptor and architect of the Spanish Renaissance. ""El Greco"" was a nickname, a reference to his Greek origin, and the artist normally signed his paintings with his full birth name in Greek letters, Δομήνικος Θεοτοκόπουλος, Doménikos Theotokópoulos, often adding the word Κρής Krēs, Cretan.",http://en.wikipedia.org/wiki/El_Greco,87
+19,Albrecht Dürer,1471 - 1528,Northern Renaissance,German,"Albrecht Dürer (; German: [ˈʔalbʁɛçt ˈdyːʁɐ]; 21 May 1471 – 6 April 1528) sometimes spelt in English as Durer or Duerer, without umlaut, was a painter, printmaker, and theorist of the German Renaissance. Born in Nuremberg, Dürer established his reputation and influence across Europe when he was still in his twenties due to his high-quality woodcut prints.",http://en.wikipedia.org/wiki/Albrecht_Dürer,328
+20,Alfred Sisley,1839 - 1899,Impressionism,"French,British","Alfred Sisley (; French: [sislɛ]; 30 October 1839 – 29 January 1899) was an Impressionist landscape painter who was born and spent most of his life in France, but retained British citizenship. He was the most consistent of the Impressionists in his dedication to painting landscape en plein air (i.e., outdoors). He deviated into figure painting only rarely and, unlike Renoir and Pissarro, found that Impressionism fulfilled his artistic needs.",http://en.wikipedia.org/wiki/Alfred_Sisley,259
+21,Pieter Bruegel,1525 - 1569,Northern Renaissance,Flemish,"Pieter Bruegel (also Brueghel) the Elder (Dutch: [ˈpitər ˈbrøːɣəɫ]; c. 1525-1530 – 9 September 1569) was the most significant artist of Dutch and Flemish Renaissance painting, a painter and printmaker from Brabant, known for his landscapes and peasant scenes (so called genre painting); he was a pioneer in making both types of subject the focus in large paintings.",http://en.wikipedia.org/wiki/Pieter_Bruegel_the_Elder,134
+22,Marc Chagall,1887 - 1985,Primitivism,"French,Jewish,Belarusian","Marc Zakharovich Chagall ( shə-GAHL; born Moishe Zakharovich Shagal; 6 July [O.S. 24 June] 1887 – 28 March 1985) was a Russian-French artist of Belarusian Jewish origin. An early modernist, he was associated with several major artistic styles  and created works in virtually every artistic format, including painting, book illustrations, stained glass, stage sets, ceramic, tapestries and fine art prints.",http://en.wikipedia.org/wiki/Marc_Chagall,239
+23,Giotto di Bondone,1266 - 1337,Proto Renaissance,Italian,"Giotto di Bondone (Italian pronunciation: [ˈdʒɔtto di bonˈdoːne]; c. 1267 – January 8, 1337), known mononymously as Giotto (English: ) and Latinised as Giottus, was an Italian painter and architect from Florence during the Late Middle Ages. He worked during the Gothic/Proto-Renaissance period.Giotto's contemporary, the banker and chronicler Giovanni Villani, wrote that Giotto was ""the most sovereign master of painting in his time, who drew all his figures and their postures according to nature"" and of his publicly recognized ""talent and excellence"".In his Lives of the Most Excellent Painters, Sculptors, and Architects, Giorgio Vasari described Giotto as making a decisive break with the prevalent Byzantine style and as initiating ""the great art of painting as we know it today, introducing the technique of drawing accurately from life, which had been neglected for more than two hundred years"".Giotto's masterwork is the decoration of the Scrovegni Chapel, in Padua, also known as the Arena Chapel, which was completed around 1305. The fresco cycle depicts the Life of the Virgin and the Life of Christ. It is regarded as one of the supreme masterpieces of the Early Renaissance.That Giotto painted the Arena Chapel and that he was chosen by the Commune of Florence in 1334 to design the new campanile (bell tower) of the Florence Cathedral are among the few certainties about his life. Almost every other aspect of it is subject to controversy: his birth date, his birthplace, his appearance, his apprenticeship, the order in which he created his works, whether or not he painted the famous frescoes in the Upper Basilica of Saint Francis in Assisi and his burial place.",http://en.wikipedia.org/wiki/Giotto_di_Bondone,119
+24,Sandro Botticelli,1445 - 1510,Early Renaissance,Italian,"Alessandro (c. 1445 – May 17, 1510), known as Sandro Botticelli (Italian: [ˈsandro bottiˈtʃɛlli]), was an Italian painter of the Early Renaissance. He belonged to the Florentine School under the patronage of Lorenzo de' Medici, a movement that Giorgio Vasari would characterize less than a hundred years later in his Vita of Botticelli as a ""golden age"". Botticelli's posthumous reputation suffered until the late 19th century; since then, his work has been seen to represent the linear grace of Early Renaissance painting.",http://en.wikipedia.org/wiki/Sandro_Botticelli,164
+25,Caravaggio,1571 - 1610,Baroque,Italian,"Michelangelo Merisi (Michele Angelo Merigi or Amerighi) da Caravaggio (, US: , Italian pronunciation: [mikeˈlandʒelo meˈriːzi da (k)karaˈvaddʒo]; 28 September 1571 – 18 July 1610) was an Italian painter active in Rome, Naples, Malta, and Sicily from the early 1590s to 1610. His paintings combine a realistic observation of the human state, both physical and emotional, with a dramatic use of lighting, which had a formative influence on Baroque painting.Caravaggio employed close physical observation with a dramatic use of chiaroscuro that came to be known as tenebrism. He made the technique a dominant stylistic element, darkening shadows and transfixing subjects in bright shafts of light. Caravaggio vividly expressed crucial moments and scenes, often featuring violent struggles, torture and death. He worked rapidly, with live models, preferring to forgo drawings and work directly onto the canvas. His influence on the new Baroque style that emerged from Mannerism was profound. It can be seen directly or indirectly in the work of Peter Paul Rubens, Jusepe de Ribera, Gian Lorenzo Bernini, and Rembrandt, and artists in the following generation heavily under his influence were called the ""Caravaggisti"" or ""Caravagesques"", as well as tenebrists or tenebrosi (""shadowists"").",http://en.wikipedia.org/wiki/Caravaggio,55
+26,Leonardo da Vinci,1452 - 1519,High Renaissance,Italian,"Leonardo di ser Piero da Vinci (Italian: [leoˈnardo di ˌsɛr ˈpjɛːro da (v)ˈvintʃi] (listen); 15 April 1452 – 2 May 1519), more commonly Leonardo da Vinci or simply Leonardo, was an Italian polymath of the Renaissance whose areas of interest included invention, drawing, painting, sculpting, architecture, science, music, mathematics, engineering, literature, anatomy, geology, astronomy, botany, writing, history, and cartography. He has been variously called the father of palaeontology, ichnology, and architecture, and he is widely considered one of the greatest painters of all time. Sometimes credited with the inventions of the parachute, helicopter, and tank, he epitomised the Renaissance humanist ideal.",http://en.wikipedia.org/wiki/Leonardo_da_Vinci,143
+27,Diego Velazquez,1599 - 1660,Baroque,Spanish,"Diego Rodríguez de Silva y Velázquez (Spanish: [ˈdjeɣo βeˈlaθkeθ]; baptized June 6, 1599 – August 6, 1660) was a Spanish painter, the leading artist in the court of King Philip IV, and one of the most important painters of the Spanish Golden Age. He was an individualistic artist of the contemporary Baroque period. In addition to numerous renditions of scenes of historical and cultural significance, he painted scores of portraits of the Spanish royal family, other notable European figures, and commoners, culminating in the production of his masterpiece Las Meninas (1656).",http://en.wikipedia.org/wiki/Diego_Velázquez,128
+28,Henri Matisse,1869 - 1954,"Impressionism,Post-Impressionism",French,"Henri Émile Benoît Matisse (French: [ɑ̃ʁi emil bənwɑ matis]; 31 December 1869 – 3 November 1954) was a French artist, known for both his use of colour and his fluid and original draughtsmanship. He was a draughtsman, printmaker, and sculptor, but is known primarily as a painter.",http://en.wikipedia.org/wiki/Henri_Matisse,186
+29,Jan van Eyck,1395 - 1441,Northern Renaissance,Flemish,"Jan van Eyck (Dutch: [ˈjɑn vɑn ˈɛik]) (before c. 1390 – 9 July 1441) was an Early Netherlandish painter active in Bruges. He is  one of the founders of Early Netherlandish painting and one of the most significant representatives of Early Northern Renaissance art. The few surviving records of his early life indicate that he was born around 1380–1390, most likely in Maaseik. He took employment in the Hague around 1422, when he was already a master painter with workshop assistants, and employed as painter and valet de chambre with John III the Pitiless, ruler of Holland and Hainaut. He was then employed in Lille as court painter to Philip the Good, Duke of Burgundy after John's death in 1425, until he moved to Bruges in 1429 where he lived until his death. He was highly regarded by Philip and undertook a number of diplomatic visits abroad, including to Lisbon in 1428 to explore the possibility of a marriage contract between the duke and Isabella of Portugal.About 20 surviving paintings are confidently attributed to him, as well as the Ghent Altarpiece and the illuminated miniatures of the Turin-Milan Hours, all dated between 1432 and 1439. Ten are dated and signed with a variation of his motto ALS IK KAN (As I (Eyck) can), a pun on his name, which he typically painted in Greek characters.",http://en.wikipedia.org/wiki/Jan_van_Eyck,81
+30,Edgar Degas,1834 - 1917,Impressionism,French,"Edgar Degas (US:  or UK: ; born Hilaire-Germain-Edgar De Gas, French: [ilɛːʁ ʒɛʁmɛ̃ ɛdɡaʁ də ɡɑ]; 19 July 1834 – 27 September 1917) was a French artist famous for his paintings, sculptures, prints, and drawings. He is especially identified with the subject of dance; more than half of his works depict dancers. Regarded as one of the founders of Impressionism, he rejected the term, preferring to be called a realist. He was a superb draftsman, and particularly masterly in depicting movement, as can be seen in his rendition of dancers, racecourse subjects and female nudes. His portraits are notable for their psychological complexity and for their portrayal of human isolation.At the beginning of his career, Degas wanted to be a history painter, a calling for which he was well prepared by his rigorous academic training and close study of classical art. In his early thirties, he changed course, and by bringing the traditional methods of a history painter to bear on contemporary subject matter, he became a classical painter of modern life.",http://en.wikipedia.org/wiki/Edgar_Degas,702
+31,Rembrandt,1606 - 1669,Baroque,Dutch,"Rembrandt Harmenszoon van Rijn (; Dutch: [ˈrɛmbrɑnt ˈɦɑrmə(n)soːn vɑn ˈrɛin] (listen); July 15, 1606 – October 4, 1669) was a Dutch draughtsman, painter and printmaker. An innovative and prolific master in three media, he is generally considered one of the greatest visual artists in the history of art and the most important in Dutch art history. Unlike most Dutch masters of the 17th century, Rembrandt's works depict a wide range of style and subject matter, from portraits and self-portraits to landscapes, genre scenes, allegorical and historical scenes, biblical and mythological themes as well as animal studies. His contributions to art came in a period of great wealth and cultural achievement that historians call the Dutch Golden Age, when Dutch art (especially Dutch painting), although in many ways antithetical to the Baroque style that dominated Europe, was extremely prolific and innovative, and gave rise to important new genres. Like many artists of the Dutch Golden Age, such as Jan Vermeer of Delft, Rembrandt was also an avid art collector and dealer.",http://en.wikipedia.org/wiki/Rembrandt,262
+32,Titian,1488 - 1576,"High Renaissance,Mannerism",Italian,"Tiziano Vecelli or Tiziano Vecellio (pronounced [titˈtsjaːno veˈtʃɛlljo]; c. 1488/1490 – 27 August 1576), known in English as Titian , was an Italian painter, the most important member of the 16th-century Venetian school. He was born in Pieve di Cadore, near Belluno, then in the Republic of Venice). During his lifetime he was often called da Cadore, taken from the place of his birth.",http://en.wikipedia.org/wiki/Titian,255
+33,Henri de Toulouse-Lautrec,1864 – 1901,Post-Impressionism,French,"Henri Marie Raymond de Toulouse-Lautrec-Monfa (24 November 1864 – 9 September 1901), also known as Henri de Toulouse-Lautrec (French: [ɑ̃ʁi də tuluz lotʁɛk]), was a French painter, printmaker, draughtsman, caricaturist, and illustrator whose immersion in the colourful and theatrical life of Paris in the late 19th century allowed him to produce a collection of enticing, elegant, and provocative images of the modern, sometimes decadent, affairs of those times.",https://en.wikipedia.org/wiki/Henri_de_Toulouse-Lautrec,81
+34,Gustave Courbet,1819 - 1877,Realism,French,"Jean Désiré Gustave Courbet (French: [ɡystav kuʁbɛ]; 10 June 1819 – 31 December 1877) was a French painter who led the Realism movement in 19th-century French painting. Committed to painting only what he could see, he rejected academic convention and the Romanticism of the previous generation of visual artists. His independence set an example that was important to later artists, such as the Impressionists and the Cubists. Courbet occupies an important place in 19th-century French painting as an innovator and as an artist willing to make bold social statements through his work.",https://en.wikipedia.org/wiki/Gustave_Courbet,59
+35,Camille Pissarro,1830 - 1903,"Impressionism,Post-Impressionism",French,"Camille Pissarro (French: [kamij pisaʁo]; 10 July 1830 – 13 November 1903) was a Danish-French Impressionist and Neo-Impressionist painter born on the island of St Thomas (now in the US Virgin Islands, but then in the Danish West Indies). His importance resides in his contributions to both Impressionism and Post-Impressionism. Pissarro studied from great forerunners, including Gustave Courbet and Jean-Baptiste-Camille Corot. He later studied and worked alongside Georges Seurat and Paul Signac when he took on the Neo-Impressionist style at the age of 54.",https://en.wikipedia.org/wiki/Camille_Pissarro,91
+36,William Turner,1775 - 1851,Romanticism,British,"Joseph Mallord William Turner  (23 April 1775 – 19 December 1851), known as J. M. W. Turner and contemporarily as William Turner, was an English Romantic painter, printmaker and watercolourist. He is known for his expressive colourisations, imaginative landscapes and turbulent, often violent marine paintings.",https://en.wikipedia.org/wiki/J._M._W._Turner,66
+37,Edvard Munch,1863 - 1944,"Symbolism,Expressionism",Norwegian,"Edvard Munch (; Norwegian: [ˈɛdvɑʈ ˈmʊŋk] (listen); 12 December 1863 – 23 January 1944) was a Norwegian painter, whose best known work, The Scream, has become one of the most iconic images of world art.",https://en.wikipedia.org/wiki/Edvard_Munch,67
+38,Paul Cezanne,1839 – 1906,Post-Impressionism,French,"Paul Cézanne (US:  or UK: ; French: [pɔl sezan]; 19 January 1839 – 22 October 1906) was a French artist and Post-Impressionist painter whose work laid the foundations of the transition from the 19th-century conception of artistic endeavor to a new and radically different world of art in the 20th century. Cézanne's often repetitive, exploratory brushstrokes are highly characteristic and clearly recognizable. He used planes of colour and small brushstrokes that build up to form complex fields. The paintings convey Cézanne's intense study of his subjects.",https://en.wikipedia.org/wiki/Paul_Cézanne,47
+39,Eugene Delacroix,1798 – 1863,Romanticism,French,"Ferdinand Victor Eugène Delacroix (; French: [ø.ʒɛn də.la.kʁwa]; 26 April 1798 – 13 August 1863) was a French Romantic artist regarded from the outset of his career as the leader of the French Romantic school.As a painter and muralist, Delacroix's use of expressive brushstrokes and his study of the optical effects of colour profoundly shaped the work of the Impressionists, while his passion for the exotic inspired the artists of the Symbolist movement. A fine lithographer, Delacroix illustrated various works of William Shakespeare, the Scottish author Walter Scott and the German author Johann Wolfgang von Goethe.",https://en.wikipedia.org/wiki/Eugène_Delacroix,31
+40,Henri Rousseau,1844 – 1910,Primitivism,French,"Henri Julien Félix Rousseau (French: [ɑ̃ʁi ʒyljɛ̃ feliks ʁuso]; May 21, 1844 – September 2, 1910) was a French post-impressionist painter in the Naïve or Primitive manner.  He was also known as Le Douanier (the customs officer), a humorous description of his occupation as a toll and tax collector. He started painting seriously in his early forties; by age 49, he retired from his job to work on his art full-time.Ridiculed during his lifetime by critics, he came to be recognized as a self-taught genius whose works are of high artistic quality. Rousseau's work exerted an extensive influence on several generations of avant-garde artists.",https://en.wikipedia.org/wiki/Henri_Rousseau,70
+41,Georges Seurat,1859 – 1891,Post-Impressionism,French,"Georges-Pierre Seurat (French: [ʒɔʁʒ pjɛʁ sœʁa]; 2 December 1859 – 29 March 1891) was a French post-Impressionist artist. He is best known for devising the painting techniques known as chromoluminarism and pointillism. While less famous than his paintings, his conté crayon drawings have also garnered a great deal of critical appreciation.  Seurat's artistic personality was compounded of qualities which are usually supposed to be opposed and incompatible: on the one hand, his extreme and delicate sensibility; on the other, a passion for logical abstraction and an almost mathematical precision of mind. His large-scale work, A Sunday Afternoon on the Island of La Grande Jatte (1884–1886), altered the direction of modern art by initiating Neo-impressionism, and is one of the icons of late 19th-century painting.",https://en.wikipedia.org/wiki/Georges_Seurat,43
+42,Paul Klee,1879 – 1940,"Expressionism,Abstractionism,Surrealism","German,Swiss","Paul Klee (German: [paʊ̯l ˈkleː]; 18 December 1879 – 29 June 1940) was a Swiss German artist. His highly individual style was influenced by movements in art that included  Expressionism, Cubism, and Surrealism. Klee was a natural draftsman who experimented with and eventually deeply explored color theory, writing about it extensively; his lectures Writings on Form and Design Theory (Schriften zur Form und Gestaltungslehre), published in English as the Paul Klee Notebooks, are held to be as important for modern art as Leonardo da Vinci's A Treatise on Painting for the Renaissance. He and his colleague, Russian painter Wassily Kandinsky, both taught at the Bauhaus school of art, design and architecture. His works reflect his dry humor and his sometimes childlike perspective, his personal moods and beliefs, and his musicality.",https://en.wikipedia.org/wiki/Paul_Klee,188
+43,Piet Mondrian,1872 – 1944,Neoplasticism,Dutch,"Pieter Cornelis Mondriaan, after 1906 Piet Mondrian (; Dutch: [ˈpit ˈmɔndrijaːn], later [ˈmɔndrijɑn]; 7 March 1872 – 1 February 1944), was a Dutch painter and theoretician who is regarded as one of the greatest artists of the 20th century. He is known for being one of the pioneers of 20th century abstract art, as he changed his artistic direction from figurative painting to an increasingly abstract style, until he reached a point where his artistic vocabulary was reduced to simple geometric elements.Mondrian's art was highly utopian and was concerned with a search for universal values and aesthetics. He proclaimed in 1914: Art is higher than reality and has no direct relation to reality. To approach the spiritual in art, one will make as little use as possible of reality, because reality is opposed to the spiritual. We find ourselves in the presence of an abstract art. Art should be above reality, otherwise it would have no value for man. His art, however, always remained rooted in nature. ",https://en.wikipedia.org/wiki/Piet_Mondrian,84
+44,Joan Miro,1893 – 1983,Surrealism,Spanish,"Joan Miró i Ferrà (; Catalan: [ʒuˈam miˈɾo j fəˈra]; 20 April 1893 – 25 December 1983) was a Spanish painter, sculptor, and ceramicist born in Barcelona. A museum dedicated to his work, the Fundació Joan Miró, was established in his native city of Barcelona in 1975, and another, the Fundació Pilar i Joan Miró, was established in his adoptive city of Palma de Mallorca in 1981.",https://en.wikipedia.org/wiki/Joan_Miró,102
+45,Andy Warhol,1928 – 1987,Pop Art,American,"Andy Warhol (; born Andrew Warhola; August 6, 1928 – February 22, 1987) was an American artist, director and producer who was a leading figure in the visual art movement known as pop art. His works explore the relationship between artistic expression, celebrity culture, and advertising that flourished by the 1960s, and span a variety of media, including painting, silkscreening, photography, film, and sculpture. Some of his best known works include the silkscreen paintings Campbell's Soup Cans (1962) and Marilyn Diptych (1962), the experimental film Chelsea Girls (1966), and the multimedia events known as the Exploding Plastic Inevitable (1966–67).",https://en.wikipedia.org/wiki/Andy_Warhol,181
+46,Paul Gauguin,1848 – 1903,"Symbolism,Post-Impressionism",French,"Eugène Henri Paul Gauguin (UK: , US: ; French: [øʒɛn ɑ̃ʁi pɔl ɡoɡɛ̃]; 7 June 1848 – 8 May 1903) was a French post-Impressionist artist. Unappreciated until after his death, Gauguin is now recognized for his experimental use of color and Synthetist style that were distinctly different from Impressionism. Toward the end of his life, he spent ten years in French Polynesia, and most of his paintings from this time depict people or landscapes from that region.",http://en.wikipedia.org/wiki/Paul_Gauguin,311
+47,Raphael,1483 – 1520,High Renaissance,Italian,"Raffaello Sanzio da Urbino (Italian: [raffaˈɛllo ˈsantsjo da urˈbiːno]; March 28 or April 6, 1483 – April 6, 1520), known as Raphael (, US: ), was an Italian painter and architect of the High Renaissance. His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur. Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work. Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career. The best known work is The School of Athens in the Vatican Stanza della Segnatura. After his early years in Rome much of his work was executed by his workshop from his drawings, with considerable loss of quality. He was extremely influential in his lifetime, though outside Rome his work was mostly known from his collaborative printmaking.",https://en.wikipedia.org/wiki/Raphael,109
+48,Michelangelo,1475 – 1564,High Renaissance,Italian,"Michelangelo di Lodovico Buonarroti Simoni or more commonly known by his first name Michelangelo (; Italian: [mikeˈlandʒelo di lodoˈviːko ˌbwɔnarˈrɔːti siˈmoːni]; 6 March 1475 – 18 February 1564) was an Italian sculptor, painter, architect and poet of the High Renaissance born in the Republic of Florence, who exerted an unparalleled influence on the development of Western art. Considered by many the greatest artist of his lifetime, and by some the greatest artist of all time, his artistic versatility was of such a high order that he is often considered a contender for the title of the archetypal Renaissance man, along with his rival, the fellow Florentine and client of the Medici, Leonardo da Vinci.A number of Michelangelo's works of painting, sculpture and architecture rank among the most famous in existence. His output in these fields was prodigious; given the sheer volume of surviving correspondence, sketches and reminiscences, he is the best-documented artist of the 16th century. He sculpted two of his best-known works, the Pietà and David, before the age of thirty. Despite holding a low opinion of painting, he also created two of the most influential frescoes in the history of Western art: the scenes from Genesis on the ceiling of the Sistine Chapel in Rome, and The Last Judgment on its altar wall. His design of the Laurentian Library pioneered Mannerist architecture. At the age of 74, he succeeded Antonio da Sangallo the Younger as the architect of St. Peter's Basilica. He transformed the plan so that the western end was finished to his design, as was the dome, with some modification, after his death.",https://en.wikipedia.org/wiki/Michelangelo,49
+49,Jackson Pollock,1912 – 1956,Abstract Expressionism,American,"Paul Jackson Pollock (; January 28, 1912 – August 11, 1956) was an American painter and a major figure in the abstract expressionist movement.",http://en.wikipedia.org/wiki/Jackson_Pollock,24
