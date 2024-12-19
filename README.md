@@ -36,12 +36,13 @@ _Keywords_ : Encoder-decoder, Variational auto-encoder, representation learning.
 ---
 
 ## 3. Approfondissement sur le SSL
-_Keywords_ : contrastive learning, masked autoencoders.
+_Keywords_ : Colorization, Inpainting, Masked autoencoders.
 
 **Objectif :** Comparer différentes stratégies d'apprentissage auto-supervisé (SSL) sur des tâches de détection d'anomalies.  
 
 **Étapes principales :**
-- Entraînement de modèles SSL (autoencodeurs masqués, modèles contrastifs, réseaux siamese...) sur des données normales.
+- Entraînement de modèles SSL sur des données normales.
+- Evaluation des modèles sur des données avec et sans anomalies, calcul du score d'anomalie via la perte de reconstruction
 - Évaluation des modèles sur les datasets MVTec AD (catégories : bouteille, noisette, capsule, brosse à dents) et AutoVI (catégorie : faisceau moteur).
 - Analyse de la courbe ROC et calcul de l'AUROC.  
 
