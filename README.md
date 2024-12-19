@@ -25,6 +25,7 @@ _Keywords_ : Encoder-decoder, Variational auto-encoder, representation learning.
 **Objectif :** Implémente un CVAE (Conditional Variational Autoencoder) pour la génération d'images conditionnées sur des classes spécifiques. Le modèle est entraîné sur le dataset Fashion-MNIST, et des exemples synthétiques sont générés pour chaque classe.
 
 **Étapes principales :**
+- Analyse exploratoire des données (visualisation des classes de vêtements et accessoires de Fashion-MNIST)
 - Entraînement du CVAE sur le dataset Fashion-MNIST.
 - Génération d'images conditionnées sur des classes.
 - Analyse et visualisation des résultats, y compris l'exploration de l'espace latent appris.
@@ -55,9 +56,10 @@ _Keywords_ : Recurrent Neural Networks, LSTM, GRU, Transformers.
 **Objectif :** Comparer différentes architectures de réseaux (RNN, LSTM, GRU, MLP, CNN) pour l'analyse de sentiments sur le dataset IMDB.  
 
 **Étapes principales :**
+- Analyse exploratoire des données (critiques de films)
 - Entraînement de chaque modèle avec une analyse des choix d'architectures, d'hyperparamètres et de fonctions de perte.
-- Comparaison des performances en termes de temps d'entraînement, mémoire et précision.
-- Ensembling des modèles via un vote majoritaire pour améliorer les résultats. 
+- Comparaison des performances vis-à-vis de la fonction de perte et du taux de bonnes prédictions.
+- Ensembling des modèles via un vote majoritaire pour essayer d'améliorer les résultats. 
 
 **Fichier associé :**
 - `Notebooks/Projet 4/Projet 4.ipynb`
