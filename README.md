@@ -14,10 +14,6 @@ _Keywords_ : Convolutional layer, Pooling, Dropout, Convolutional network archit
 - Sélection et justification des architectures de réseaux adaptées.
 - Entraînement et évaluation des performances.  
 
-**Données utilisées :**
-- Images de peintures classées par artistes en haute qualité.
-- Métadonnées des artistes incluant biographie, styles artistiques, et périodes.  
-
 **Fichier associé :**
 - `Notebooks/Projet 1/Projet 1.ipynb`
 
