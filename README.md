@@ -72,5 +72,4 @@ Clonez ce dépôt et installez les dépendances nécessaires via `requirements.t
 ```bash
 git clone https://github.com/manonlcvp/Projet-HDDL.git
 cd Projet-HDDL
-pip install -r requirements.txt
 
