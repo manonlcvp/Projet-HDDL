@@ -68,7 +68,7 @@ _Keywords_ : Recurrent Neural Networks, LSTM, GRU, Transformers.
 ---
 
 ## Installation
-Clonez ce dépôt et installez les dépendances nécessaires via `requirements.txt` :  
+Clonez ce dépôt :  
 ```bash
 git clone https://github.com/manonlcvp/Projet-HDDL.git
 cd Projet-HDDL
